@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Status Hub - Official AI Provider Status Monitor</title>
+    <meta name="description" content="Official-source AI provider outage/status dashboard for OpenAI, Claude, Gemini, Grok, and AWS. No API keys, GitHub Actions + Pages, JSON API." />
+    <link rel="canonical" href="https://study8677.github.io/ai-status-hub/" />
+    <link rel="icon" href="https://study8677.github.io/ai-status-hub/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="AI Status Hub" />
+    <meta property="og:description" content="Official-source AI outage/status dashboard for OpenAI, Claude, Gemini, Grok, and AWS. No API keys. Runs on GitHub Actions + Pages." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://study8677.github.io/ai-status-hub/" />
+    <meta property="og:image" content="https://study8677.github.io/ai-status-hub/og.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Status Hub" />
+    <meta name="twitter:description" content="Official-source AI outage/status dashboard with JSON API and GitHub Pages hosting." />
+    <meta name="twitter:image" content="https://study8677.github.io/ai-status-hub/og.svg" />
+    <meta name="theme-color" content="#0b57d0" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f7f9;
+        --panel: #ffffff;
+        --text: #18212f;
+        --muted: #657083;
+        --line: #d9dee7;
+        --ok: #137333;
+        --warn: #b06000;
+        --critical: #b3261e;
+        --unknown: #5f6368;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      header {
+        background: #ffffff;
+        border-bottom: 1px solid var(--line);
+      }
+      .wrap {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        align-items: end;
+        padding: 28px 0 22px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+        line-height: 1.15;
+        letter-spacing: 0;
+      }
+      .subtitle, .meta, dd, td {
+        color: var(--muted);
+      }
+      .subtitle, .meta {
+        margin: 0;
+        font-size: 14px;
+      }
+      .summary {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+      }
+      .hero-side {
+        display: grid;
+        justify-items: end;
+        gap: 10px;
+      }
+      .header-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      .header-actions a {
+        color: #0b57d0;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .lang-switch {
+        display: inline-flex;
+        gap: 4px;
+        padding: 3px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f6f7f9;
+      }
+      .lang-switch button {
+        min-height: 28px;
+        border: 0;
+        border-radius: 6px;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 800;
+        padding: 3px 9px;
+      }
+      .lang-switch button[aria-pressed="true"] {
+        background: #ffffff;
+        color: #0b57d0;
+        box-shadow: 0 1px 2px rgba(24, 33, 47, 0.12);
+      }
+      .cta-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+      }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: #ffffff;
+        padding: 6px 11px;
+        color: #0b57d0;
+        font-size: 14px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+      .cta.primary {
+        background: #0b57d0;
+        border-color: #0b57d0;
+        color: #ffffff;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        border-radius: 999px;
+        padding: 3px 9px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+      .badge.ok { color: var(--ok); background: #e7f4ea; }
+      .badge.warn { color: var(--warn); background: #fff3dc; }
+      .badge.critical { color: var(--critical); background: #fce8e6; }
+      .badge.unknown { color: var(--unknown); background: #eceff3; }
+      main {
+        padding: 24px 0 42px;
+      }
+      .status-banner {
+        border: 1px solid var(--line);
+        border-left-width: 6px;
+        background: var(--panel);
+        padding: 16px 18px;
+        margin-bottom: 18px;
+      }
+      .status-banner.ok { border-left-color: var(--ok); }
+      .status-banner.warn { border-left-color: var(--warn); }
+      .status-banner.critical { border-left-color: var(--critical); }
+      .status-banner.unknown { border-left-color: var(--unknown); }
+      .status-banner strong {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+      .update-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 10px;
+        margin: 0 0 18px;
+      }
+      .update-item {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 12px 14px;
+      }
+      .update-item strong {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 4px;
+      }
+      .value-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 12px;
+        margin: 0 0 20px;
+      }
+      .value-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 14px;
+      }
+      .value-card strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+      .value-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 14px;
+      }
+      .service-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-top: 5px solid var(--unknown);
+        border-radius: 8px;
+        padding: 16px;
+      }
+      .service-card.ok { border-top-color: var(--ok); }
+      .service-card.warn { border-top-color: var(--warn); }
+      .service-card.critical { border-top-color: var(--critical); }
+      .service-topline {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: center;
+      }
+      h2 {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+      .score-row {
+        display: grid;
+        grid-template-columns: auto 1fr auto 1fr auto 1fr;
+        gap: 4px 8px;
+        align-items: baseline;
+        margin: 14px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        padding: 12px 0;
+      }
+      .score-row strong {
+        font-size: 20px;
+      }
+      .score-row span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      dl {
+        margin: 0;
+        display: grid;
+        gap: 8px;
+      }
+      dl div {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 10px;
+      }
+      dt {
+        color: #3c4656;
+        font-size: 12px;
+        font-weight: 800;
+      }
+      dd {
+        margin: 0;
+        overflow-wrap: anywhere;
+      }
+      .links {
+        min-height: 24px;
+        margin-top: 14px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      a {
+        color: #0b57d0;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+      section {
+        margin-top: 24px;
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+      .section-head h2 {
+        margin: 0;
+      }
+      .endpoint-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 12px;
+      }
+      .endpoint {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 14px;
+      }
+      code {
+        display: block;
+        margin-top: 8px;
+        padding: 8px;
+        border-radius: 6px;
+        background: #f0f3f7;
+        color: #263244;
+        overflow-wrap: anywhere;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--panel);
+        border: 1px solid var(--line);
+      }
+      th, td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        font-size: 14px;
+      }
+      th {
+        color: #3c4656;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      @media (max-width: 760px) {
+        .hero {
+          grid-template-columns: 1fr;
+          align-items: start;
+        }
+        .summary {
+          justify-content: flex-start;
+        }
+        .hero-side {
+          justify-items: start;
+        }
+        .header-actions {
+          justify-content: flex-start;
+        }
+        table {
+          display: block;
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap hero">
+        <div>
+          <h1>AI Status Hub</h1>
+          <p class="subtitle" data-i18n-en="Official-source AI provider outage/status dashboard for OpenAI, Claude, Gemini, Grok, and AWS." data-i18n-zh="AI 服务官方状态中心，聚合 OpenAI、Claude、Gemini、Grok、AWS 官方状态源。">Official-source AI provider outage/status dashboard for OpenAI, Claude, Gemini, Grok, and AWS.</p>
+          <p class="meta"><span data-i18n-en="Last updated:" data-i18n-zh="上次页面更新时间：">Last updated:</span> <span data-i18n-en="2026-07-03 09:22:18 Beijing / 2026-07-03 01:22:18 UTC" data-i18n-zh="2026-07-03 09:22:18 北京时间 / 2026-07-03 01:22:18 UTC">2026-07-03 09:22:18 Beijing / 2026-07-03 01:22:18 UTC</span></p>
+          <div class="cta-row">
+            <a class="cta primary" href="https://github.com/study8677/ai-status-hub" rel="noreferrer" target="_blank" data-i18n-en="Star on GitHub" data-i18n-zh="在 GitHub 上 Star">Star on GitHub</a>
+            <a class="cta" href="https://github.com/study8677/ai-status-hub/blob/main/docs/SELF_HOST.md" rel="noreferrer" target="_blank" data-i18n-en="Fork and self-host" data-i18n-zh="Fork 后自托管">Fork and self-host</a>
+            <a class="cta" href="https://study8677.github.io/ai-status-hub/last_run.json" rel="noreferrer" target="_blank" data-i18n-en="JSON API" data-i18n-zh="查看 JSON API">JSON API</a>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang-button="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang-button="zh" aria-pressed="false">中文</button>
+          </div>
+          <div class="summary">
+            <span class="badge critical" data-i18n-en="Critical 1" data-i18n-zh="严重 1">Critical 1</span>
+            <span class="badge warn" data-i18n-en="Warn 1" data-i18n-zh="预警 1">Warn 1</span>
+            <span class="badge ok" data-i18n-en="OK 3" data-i18n-zh="正常 3">OK 3</span>
+            <span class="badge unknown" data-i18n-en="Unknown 0" data-i18n-zh="未知 0">Unknown 0</span>
+          </div>
+          <nav class="header-actions" aria-label="Project links">
+            <a href="https://github.com/study8677/ai-status-hub" rel="noreferrer" target="_blank" data-i18n-en="GitHub repo" data-i18n-zh="GitHub 仓库">GitHub repo</a>
+            <a href="https://github.com/study8677/ai-status-hub/actions/workflows/monitor.yml" rel="noreferrer" target="_blank" data-i18n-en="Actions runs" data-i18n-zh="Actions 运行记录">Actions runs</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="wrap">
+      <div class="status-banner critical">
+        <strong data-i18n-en="At least one monitored provider reports a major incident" data-i18n-zh="至少一个监控服务处于严重异常">At least one monitored provider reports a major incident</strong>
+        <span class="meta" data-i18n-en="Data comes only from official provider status sources, sampled by GitHub Actions and published to GitHub Pages." data-i18n-zh="数据仅来自官方状态源，由 GitHub Actions 定时采样并发布到 GitHub Pages。">Data comes only from official provider status sources, sampled by GitHub Actions and published to GitHub Pages.</span>
+      </div>
+      <div class="value-grid">
+        <div class="value-card">
+          <strong data-i18n-en="Official sources only" data-i18n-zh="官方源优先">Official sources only</strong>
+          <p data-i18n-en="Uses provider status pages, RSS feeds, and public incident APIs instead of noisy third-party aggregators." data-i18n-zh="使用 provider 官方状态页、RSS 或公开事件接口，避免第三方聚合造成的噪声。">Uses provider status pages, RSS feeds, and public incident APIs instead of noisy third-party aggregators.</p>
+        </div>
+        <div class="value-card">
+          <strong data-i18n-en="Free GitHub hosting" data-i18n-zh="免费托管运行">Free GitHub hosting</strong>
+          <p data-i18n-en="GitHub Actions samples providers, while GitHub Pages publishes the dashboard and JSON files." data-i18n-zh="GitHub Actions 负责采样，GitHub Pages 发布页面和 JSON 文件。">GitHub Actions samples providers, while GitHub Pages publishes the dashboard and JSON files.</p>
+        </div>
+        <div class="value-card">
+          <strong data-i18n-en="Reusable outputs" data-i18n-zh="可复用输出">Reusable outputs</strong>
+          <p data-i18n-en="Publishes last_run.json, events.ndjson, and daily reports for dashboards, bots, and automations." data-i18n-zh="发布 last_run.json、events.ndjson 和日报，方便接入自己的监控或机器人。">Publishes last_run.json, events.ndjson, and daily reports for dashboards, bots, and automations.</p>
+        </div>
+        <div class="value-card">
+          <strong data-i18n-en="Clear signal boundary" data-i18n-zh="低误报边界">Clear signal boundary</strong>
+          <p data-i18n-en="Official source failures show as unknown instead of being converted into provider outages." data-i18n-zh="官方源抓取失败显示为未知，不直接伪造成服务故障。">Official source failures show as unknown instead of being converted into provider outages.</p>
+        </div>
+      </div>
+      <div class="update-grid">
+        <div class="update-item">
+          <strong data-i18n-en="Update cadence" data-i18n-zh="更新频率">Update cadence</strong>
+          <span class="meta" data-i18n-en="Runs every 5 minutes." data-i18n-zh="每 5 分钟触发一次。">Runs every 5 minutes.</span>
+        </div>
+        <div class="update-item">
+          <strong data-i18n-en="Trigger minutes" data-i18n-zh="触发时间">Trigger minutes</strong>
+          <span class="meta" data-i18n-en="Every hour at 00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, and 55." data-i18n-zh="北京时间每小时 00、05、10、15、20、25、30、35、40、45、50、55 分。">Every hour at 00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, and 55.</span>
+        </div>
+        <div class="update-item">
+          <strong data-i18n-en="Next estimated run" data-i18n-zh="下一次预计触发">Next estimated run</strong>
+          <span class="meta" data-i18n-en="2026-07-03 09:25:00 Beijing / 2026-07-03 01:25:00 UTC" data-i18n-zh="2026-07-03 09:25:00 北京时间 / 2026-07-03 01:25:00 UTC">2026-07-03 09:25:00 Beijing / 2026-07-03 01:25:00 UTC</span>
+        </div>
+        <div class="update-item">
+          <strong data-i18n-en="Visible freshness" data-i18n-zh="实际生效">Visible freshness</strong>
+          <span class="meta" data-i18n-en="Usually updates seconds to minutes after a trigger, depending on Actions queueing and Pages cache." data-i18n-zh="通常在触发后几十秒到数分钟内完成，取决于 GitHub Actions 排队和 Pages 缓存。">Usually updates seconds to minutes after a trigger, depending on Actions queueing and Pages cache.</span>
+        </div>
+      </div>
+      <div class="grid">
+        
+            <article class="service-card critical">
+              <div class="service-topline">
+                <h2>AWS</h2>
+                <span class="badge critical" data-i18n-en="CRITICAL" data-i18n-zh="严重 CRITICAL">CRITICAL</span>
+              </div>
+              <div class="score-row">
+                <strong>20</strong>
+                <span data-i18n-en="Score" data-i18n-zh="分数">Score</span>
+                <strong>2</strong>
+                <span data-i18n-en="Active" data-i18n-zh="进行中">Active</span>
+                <strong data-i18n-en="13d 23h" data-i18n-zh="13 天 23 小时">13d 23h</strong>
+                <span data-i18n-en="Duration" data-i18n-zh="持续">Duration</span>
+              </div>
+              <dl>
+                <div><dt data-i18n-en="Status" data-i18n-zh="状态">Status</dt><dd>major_outage</dd></div>
+                <div><dt data-i18n-en="Incident" data-i18n-zh="事件">Incident</dt><dd data-i18n-en="Multiple services / UAE" data-i18n-zh="Multiple services / UAE">Multiple services / UAE</dd></div>
+                <div><dt data-i18n-en="Components" data-i18n-zh="组件">Components</dt><dd data-i18n-en="Multiple services / UAE degraded, Multiple services / Bahrain degraded" data-i18n-zh="Multiple services / UAE degraded, Multiple services / Bahrain degraded">Multiple services / UAE degraded, Multiple services / Bahrain degraded</dd></div>
+                <div><dt data-i18n-en="Source updated" data-i18n-zh="源更新时间">Source updated</dt><dd data-i18n-en="2026-04-30 15:25:54 Beijing / 2026-04-30 07:25:54 UTC" data-i18n-zh="2026-04-30 15:25:54 北京时间 / 2026-04-30 07:25:54 UTC">2026-04-30 15:25:54 Beijing / 2026-04-30 07:25:54 UTC</dd></div>
+                <div><dt data-i18n-en="Sampled" data-i18n-zh="采样时间">Sampled</dt><dd data-i18n-en="2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC" data-i18n-zh="2026-07-03 09:22:17 北京时间 / 2026-07-03 01:22:17 UTC">2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC</dd></div>
+                <div><dt data-i18n-en="Confidence" data-i18n-zh="置信度">Confidence</dt><dd>0.97</dd></div>
+              </dl>
+              <div class="links"><a href="https://status.aws.amazon.com" rel="noreferrer" target="_blank" data-i18n-en="Official source" data-i18n-zh="官方源">Official source</a></div>
+            </article>
+            
+            <article class="service-card warn">
+              <div class="service-topline">
+                <h2>OpenAI</h2>
+                <span class="badge warn" data-i18n-en="WARN" data-i18n-zh="预警 WARN">WARN</span>
+              </div>
+              <div class="score-row">
+                <strong>70</strong>
+                <span data-i18n-en="Score" data-i18n-zh="分数">Score</span>
+                <strong>1</strong>
+                <span data-i18n-en="Active" data-i18n-zh="进行中">Active</span>
+                <strong data-i18n-en="42h 40m" data-i18n-zh="42 小时 40 分钟">42h 40m</strong>
+                <span data-i18n-en="Duration" data-i18n-zh="持续">Duration</span>
+              </div>
+              <dl>
+                <div><dt data-i18n-en="Status" data-i18n-zh="状态">Status</dt><dd>minor</dd></div>
+                <div><dt data-i18n-en="Incident" data-i18n-zh="事件">Incident</dt><dd data-i18n-en="Codex, workspace analytics, conversation search, searching for custom GPTs, ChatGPT user invites, and Compliance Log Platform download endpoint not working in FedRAMP workspaces" data-i18n-zh="Codex, workspace analytics, conversation search, searching for custom GPTs, ChatGPT user invites, and Compliance Log Platform download endpoint not working in FedRAMP workspaces">Codex, workspace analytics, conversation search, searching for custom GPTs, ChatGPT user invites, and Compliance Log Platform download endpoint not working in FedRAMP workspaces</dd></div>
+                <div><dt data-i18n-en="Components" data-i18n-zh="组件">Components</dt><dd data-i18n-en="FedRAMP degraded_performance, Batch operational, Audio operational, Login operational, plus 21 more" data-i18n-zh="FedRAMP degraded_performance, Batch operational, Audio operational, Login operational，另外 21 项">FedRAMP degraded_performance, Batch operational, Audio operational, Login operational, plus 21 more</dd></div>
+                <div><dt data-i18n-en="Source updated" data-i18n-zh="源更新时间">Source updated</dt><dd data-i18n-en="2026-06-29 15:00:00 Beijing / 2026-06-29 07:00:00 UTC" data-i18n-zh="2026-06-29 15:00:00 北京时间 / 2026-06-29 07:00:00 UTC">2026-06-29 15:00:00 Beijing / 2026-06-29 07:00:00 UTC</dd></div>
+                <div><dt data-i18n-en="Sampled" data-i18n-zh="采样时间">Sampled</dt><dd data-i18n-en="2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC" data-i18n-zh="2026-07-03 09:22:17 北京时间 / 2026-07-03 01:22:17 UTC">2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC</dd></div>
+                <div><dt data-i18n-en="Confidence" data-i18n-zh="置信度">Confidence</dt><dd>0.98</dd></div>
+              </dl>
+              <div class="links"><a href="https://status.openai.com" rel="noreferrer" target="_blank" data-i18n-en="Official source" data-i18n-zh="官方源">Official source</a></div>
+            </article>
+            
+            <article class="service-card ok">
+              <div class="service-topline">
+                <h2>Claude</h2>
+                <span class="badge ok" data-i18n-en="OK" data-i18n-zh="正常 OK">OK</span>
+              </div>
+              <div class="score-row">
+                <strong>100</strong>
+                <span data-i18n-en="Score" data-i18n-zh="分数">Score</span>
+                <strong>0</strong>
+                <span data-i18n-en="Active" data-i18n-zh="进行中">Active</span>
+                <strong data-i18n-en="-" data-i18n-zh="-">-</strong>
+                <span data-i18n-en="Duration" data-i18n-zh="持续">Duration</span>
+              </div>
+              <dl>
+                <div><dt data-i18n-en="Status" data-i18n-zh="状态">Status</dt><dd>none</dd></div>
+                <div><dt data-i18n-en="Incident" data-i18n-zh="事件">Incident</dt><dd data-i18n-en="No active incident reported" data-i18n-zh="暂无进行中事件">No active incident reported</dd></div>
+                <div><dt data-i18n-en="Components" data-i18n-zh="组件">Components</dt><dd data-i18n-en="No affected component reported" data-i18n-zh="官方源未报告受影响组件">No affected component reported</dd></div>
+                <div><dt data-i18n-en="Source updated" data-i18n-zh="源更新时间">Source updated</dt><dd data-i18n-en="2026-07-03 08:25:05 Beijing / 2026-07-03 00:25:05 UTC" data-i18n-zh="2026-07-03 08:25:05 北京时间 / 2026-07-03 00:25:05 UTC">2026-07-03 08:25:05 Beijing / 2026-07-03 00:25:05 UTC</dd></div>
+                <div><dt data-i18n-en="Sampled" data-i18n-zh="采样时间">Sampled</dt><dd data-i18n-en="2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC" data-i18n-zh="2026-07-03 09:22:17 北京时间 / 2026-07-03 01:22:17 UTC">2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC</dd></div>
+                <div><dt data-i18n-en="Confidence" data-i18n-zh="置信度">Confidence</dt><dd>0.98</dd></div>
+              </dl>
+              <div class="links"><a href="https://status.claude.com" rel="noreferrer" target="_blank" data-i18n-en="Official source" data-i18n-zh="官方源">Official source</a></div>
+            </article>
+            
+            <article class="service-card ok">
+              <div class="service-topline">
+                <h2>Gemini</h2>
+                <span class="badge ok" data-i18n-en="OK" data-i18n-zh="正常 OK">OK</span>
+              </div>
+              <div class="score-row">
+                <strong>100</strong>
+                <span data-i18n-en="Score" data-i18n-zh="分数">Score</span>
+                <strong>0</strong>
+                <span data-i18n-en="Active" data-i18n-zh="进行中">Active</span>
+                <strong data-i18n-en="-" data-i18n-zh="-">-</strong>
+                <span data-i18n-en="Duration" data-i18n-zh="持续">Duration</span>
+              </div>
+              <dl>
+                <div><dt data-i18n-en="Status" data-i18n-zh="状态">Status</dt><dd>operational</dd></div>
+                <div><dt data-i18n-en="Incident" data-i18n-zh="事件">Incident</dt><dd data-i18n-en="No active incident reported" data-i18n-zh="暂无进行中事件">No active incident reported</dd></div>
+                <div><dt data-i18n-en="Components" data-i18n-zh="组件">Components</dt><dd data-i18n-en="No affected component reported" data-i18n-zh="官方源未报告受影响组件">No affected component reported</dd></div>
+                <div><dt data-i18n-en="Source updated" data-i18n-zh="源更新时间">Source updated</dt><dd data-i18n-en="2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC" data-i18n-zh="2026-07-03 09:22:17 北京时间 / 2026-07-03 01:22:17 UTC">2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC</dd></div>
+                <div><dt data-i18n-en="Sampled" data-i18n-zh="采样时间">Sampled</dt><dd data-i18n-en="2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC" data-i18n-zh="2026-07-03 09:22:17 北京时间 / 2026-07-03 01:22:17 UTC">2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC</dd></div>
+                <div><dt data-i18n-en="Confidence" data-i18n-zh="置信度">Confidence</dt><dd>0.95</dd></div>
+              </dl>
+              <div class="links"><a href="https://status.cloud.google.com" rel="noreferrer" target="_blank" data-i18n-en="Official source" data-i18n-zh="官方源">Official source</a></div>
+            </article>
+            
+            <article class="service-card ok">
+              <div class="service-topline">
+                <h2>Grok</h2>
+                <span class="badge ok" data-i18n-en="OK" data-i18n-zh="正常 OK">OK</span>
+              </div>
+              <div class="score-row">
+                <strong>100</strong>
+                <span data-i18n-en="Score" data-i18n-zh="分数">Score</span>
+                <strong>0</strong>
+                <span data-i18n-en="Active" data-i18n-zh="进行中">Active</span>
+                <strong data-i18n-en="-" data-i18n-zh="-">-</strong>
+                <span data-i18n-en="Duration" data-i18n-zh="持续">Duration</span>
+              </div>
+              <dl>
+                <div><dt data-i18n-en="Status" data-i18n-zh="状态">Status</dt><dd>operational</dd></div>
+                <div><dt data-i18n-en="Incident" data-i18n-zh="事件">Incident</dt><dd data-i18n-en="No active incident reported" data-i18n-zh="暂无进行中事件">No active incident reported</dd></div>
+                <div><dt data-i18n-en="Components" data-i18n-zh="组件">Components</dt><dd data-i18n-en="No affected component reported" data-i18n-zh="官方源未报告受影响组件">No affected component reported</dd></div>
+                <div><dt data-i18n-en="Source updated" data-i18n-zh="源更新时间">Source updated</dt><dd data-i18n-en="2026-07-02 09:12:29 Beijing / 2026-07-02 01:12:29 UTC" data-i18n-zh="2026-07-02 09:12:29 北京时间 / 2026-07-02 01:12:29 UTC">2026-07-02 09:12:29 Beijing / 2026-07-02 01:12:29 UTC</dd></div>
+                <div><dt data-i18n-en="Sampled" data-i18n-zh="采样时间">Sampled</dt><dd data-i18n-en="2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC" data-i18n-zh="2026-07-03 09:22:17 北京时间 / 2026-07-03 01:22:17 UTC">2026-07-03 09:22:17 Beijing / 2026-07-03 01:22:17 UTC</dd></div>
+                <div><dt data-i18n-en="Confidence" data-i18n-zh="置信度">Confidence</dt><dd>0.85</dd></div>
+              </dl>
+              <div class="links"><a href="https://status.x.ai/" rel="noreferrer" target="_blank" data-i18n-en="Official source" data-i18n-zh="官方源">Official source</a></div>
+            </article>
+            
+      </div>
+      <section>
+        <div class="section-head">
+          <h2 data-i18n-en="Public outputs" data-i18n-zh="公开输出">Public outputs</h2>
+          <span class="meta" data-i18n-en="Readable by scripts, dashboards, and bots." data-i18n-zh="可直接被脚本、看板或机器人读取。">Readable by scripts, dashboards, and bots.</span>
+        </div>
+        <div class="endpoint-grid">
+          <div class="endpoint">
+            <strong data-i18n-en="Latest snapshot" data-i18n-zh="最新快照">Latest snapshot</strong>
+            <code>GET /last_run.json</code>
+          </div>
+          <div class="endpoint">
+            <strong data-i18n-en="Event stream" data-i18n-zh="事件流">Event stream</strong>
+            <code>GET /output/events.ndjson</code>
+          </div>
+          <div class="endpoint">
+            <strong data-i18n-en="Daily report" data-i18n-zh="日报">Daily report</strong>
+            <code>GET /reports/daily-report-YYYY-MM-DD.json</code>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="section-head">
+          <h2 data-i18n-en="Active incidents" data-i18n-zh="进行中事件">Active incidents</h2>
+          <span class="meta"><a href="https://github.com/study8677/ai-status-hub" rel="noreferrer" target="_blank" data-i18n-en="Star / Fork on GitHub" data-i18n-zh="去 GitHub Star / Fork">Star / Fork on GitHub</a></span>
+        </div>
+        <table>
+          <thead>
+            <tr><th data-i18n-en="Service" data-i18n-zh="服务">Service</th><th data-i18n-en="Level" data-i18n-zh="等级">Level</th><th data-i18n-en="Incident" data-i18n-zh="事件">Incident</th><th data-i18n-en="Status" data-i18n-zh="状态">Status</th><th data-i18n-en="Link" data-i18n-zh="链接">Link</th></tr>
+          </thead>
+          <tbody>
+            
+                <tr>
+                  <td>AWS</td>
+                  <td><span class="badge critical" data-i18n-en="CRITICAL" data-i18n-zh="严重 CRITICAL">CRITICAL</span></td>
+                  <td>Multiple services / UAE</td>
+                  <td>3</td>
+                  <td></td>
+                </tr>
+                
+                <tr>
+                  <td>AWS</td>
+                  <td><span class="badge critical" data-i18n-en="CRITICAL" data-i18n-zh="严重 CRITICAL">CRITICAL</span></td>
+                  <td>Multiple services / Bahrain</td>
+                  <td>3</td>
+                  <td></td>
+                </tr>
+                
+                <tr>
+                  <td>OpenAI</td>
+                  <td><span class="badge warn" data-i18n-en="WARN" data-i18n-zh="预警 WARN">WARN</span></td>
+                  <td>Codex, workspace analytics, conversation search, searching for custom GPTs, ChatGPT user invites, and Compliance Log Platform download endpoint not working in FedRAMP workspaces</td>
+                  <td>investigating</td>
+                  <td></td>
+                </tr>
+                
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script>
+      (() => {
+        const storageKey = "ai-status-hub-language";
+        const buttons = Array.from(document.querySelectorAll("[data-lang-button]"));
+        const getStoredLanguage = () => {
+          try {
+            return localStorage.getItem(storageKey);
+          } catch (error) {
+            return null;
+          }
+        };
+        const setStoredLanguage = (language) => {
+          try {
+            localStorage.setItem(storageKey, language);
+          } catch (error) {}
+        };
+        const preferredLanguage = () => {
+          const stored = getStoredLanguage();
+          if (stored === "en" || stored === "zh") {
+            return stored;
+          }
+          return (navigator.language || "").toLowerCase().startsWith("zh") ? "zh" : "en";
+        };
+        const applyLanguage = (language) => {
+          const nextLanguage = language === "zh" ? "zh" : "en";
+          document.documentElement.lang = nextLanguage === "zh" ? "zh-CN" : "en";
+          document.querySelectorAll("[data-i18n-en][data-i18n-zh]").forEach((node) => {
+            node.textContent = nextLanguage === "zh" ? node.dataset.i18nZh : node.dataset.i18nEn;
+          });
+          buttons.forEach((button) => {
+            button.setAttribute("aria-pressed", button.dataset.langButton === nextLanguage ? "true" : "false");
+          });
+          setStoredLanguage(nextLanguage);
+        };
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => applyLanguage(button.dataset.langButton));
+        });
+        applyLanguage(preferredLanguage());
+      })();
+    </script>
+  </body>
+</html>
