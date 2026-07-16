@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-15T23:13:57Z",
+  "generated_at": "2026-07-16T00:11:29Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-07-15T23:13:57Z",
+      "time": "2026-07-16T00:11:28Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,13 +137,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 14,
+      "consecutive_recoveries": 15,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-07-15T23:13:57Z",
+      "time": "2026-07-16T00:11:28Z",
       "overall_status": "none",
       "components": [
         {
@@ -186,31 +186,31 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 7,
+      "consecutive_recoveries": 8,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-07-15T23:13:57Z",
+      "time": "2026-07-16T00:11:29Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-07-15T23:13:57Z",
+      "updated_at": "2026-07-16T00:11:29Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 326,
+      "consecutive_recoveries": 327,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-07-15T23:13:57Z",
+      "time": "2026-07-16T00:11:29Z",
       "overall_status": "operational",
       "components": [
         {
@@ -227,13 +227,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 326,
+      "consecutive_recoveries": 327,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-07-15T23:13:57Z",
+      "time": "2026-07-16T00:11:29Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -258,11 +258,11 @@
           "name": "Multiple services / Frankfurt",
           "status": "1",
           "summary": "Elevated connectivity issues with a single Avalability zone",
-          "updated_at": "2026-07-15T23:11:07Z",
+          "updated_at": "2026-07-15T23:36:01Z",
           "link": null,
           "region": "Frankfurt",
           "severity": "warn",
-          "latest_message": "We are investigating elevated connectivity issues with a single Avalability zone (euc1-az2) in the EU-CENTRAL-1 Region."
+          "latest_message": "We are seeing early signs of recovery and continue to work toward full resolution. We will continue to provide updates."
         },
         {
           "id": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
@@ -289,14 +289,14 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-07-15T23:11:07Z",
+      "updated_at": "2026-07-15T23:36:01Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 326,
+      "consecutive_anomalies": 327,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 2321634,
+      "anomaly_seconds": 2325086,
       "latest_incident_link": null
     }
   ],
