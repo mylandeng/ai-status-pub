@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-17T08:38:58Z",
+  "generated_at": "2026-07-17T10:25:20Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-07-17T08:38:58Z",
+      "time": "2026-07-17T10:25:19Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,13 +137,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 4,
+      "consecutive_recoveries": 5,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-07-17T08:38:58Z",
+      "time": "2026-07-17T10:25:19Z",
       "overall_status": "minor",
       "components": [
         {
@@ -196,32 +196,32 @@
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-07-17T08:38:58Z",
-      "consecutive_anomalies": 1,
+      "consecutive_anomalies": 2,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
+      "anomaly_seconds": 6381,
       "latest_incident_link": "https://stspg.io/p0rgrvqnx02s"
     },
     {
       "service": "Gemini",
-      "time": "2026-07-17T08:38:58Z",
+      "time": "2026-07-17T10:25:19Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-07-17T08:38:58Z",
+      "updated_at": "2026-07-17T10:25:19Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 345,
+      "consecutive_recoveries": 346,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-07-17T08:38:58Z",
+      "time": "2026-07-17T10:25:19Z",
       "overall_status": "operational",
       "components": [
         {
@@ -238,13 +238,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 345,
+      "consecutive_recoveries": 346,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-07-17T08:38:58Z",
+      "time": "2026-07-17T10:25:19Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -274,11 +274,11 @@
           "name": "AWS Billing Console",
           "status": "1",
           "summary": "Inaccurate Estimated Billing Data",
-          "updated_at": "2026-07-17T08:33:36Z",
+          "updated_at": "2026-07-17T10:03:26Z",
           "link": null,
           "region": null,
           "severity": "warn",
-          "latest_message": "We are investigating issues with Cost Explorer reflecting inaccurate estimated billing data."
+          "latest_message": "We continue to work to resolve the issue affecting estimated cost and usage data displayed in the Billing and Cost Management Console. We have identified the root cause as an issue with unit pricing within the estimated billing computation subsystem and we are working on a mitigation. The displayed billing estimates do not reflect actual usage and charges. There are no customer actions required at this time. Once the issue has been mitigated, we expect full resolution to take multiple hours as we work through recomputing the estimated billing data. We will provide another update by 4:00 AM PDT or sooner if more information becomes available."
         },
         {
           "id": "arn:aws:health:global::event/CLOUDFRONT/AWS_CLOUDFRONT_OPERATIONAL_ISSUE/AWS_CLOUDFRONT_OPERATIONAL_ISSUE_EDF4C_83808542A4E",
@@ -316,16 +316,23 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-07-17T08:33:36Z",
+      "updated_at": "2026-07-17T10:03:26Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 345,
+      "consecutive_anomalies": 346,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 2441935,
+      "anomaly_seconds": 2448316,
       "latest_incident_link": null
     }
   ],
-  "alerts": []
+  "alerts": [
+    {
+      "type": "alert",
+      "service": "Claude",
+      "level": "warn",
+      "message": "Claude is in WARN state (sampled 2026-07-17T10:25:19Z)"
+    }
+  ]
 }
