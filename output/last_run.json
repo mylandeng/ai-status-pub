@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-18T10:36:29Z",
+  "generated_at": "2026-07-18T11:33:54Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-07-18T10:36:29Z",
+      "time": "2026-07-18T11:33:53Z",
       "overall_status": "minor",
       "components": [
         {
@@ -147,14 +147,14 @@
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-07-18T09:05:16Z",
-      "consecutive_anomalies": 2,
+      "consecutive_anomalies": 3,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 5473,
+      "anomaly_seconds": 8917,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-07-18T10:36:29Z",
+      "time": "2026-07-18T11:33:53Z",
       "overall_status": "none",
       "components": [
         {
@@ -191,37 +191,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-07-18T08:56:14.901Z",
+      "updated_at": "2026-07-18T11:18:48.285Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 10,
+      "consecutive_recoveries": 11,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-07-18T10:36:29Z",
+      "time": "2026-07-18T11:33:53Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-07-18T10:36:29Z",
+      "updated_at": "2026-07-18T11:33:53Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 363,
+      "consecutive_recoveries": 364,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-07-18T10:36:29Z",
+      "time": "2026-07-18T11:33:54Z",
       "overall_status": "operational",
       "components": [
         {
@@ -238,13 +238,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 363,
+      "consecutive_recoveries": 364,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-07-18T10:36:29Z",
+      "time": "2026-07-18T11:33:54Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -305,18 +305,11 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 363,
+      "consecutive_anomalies": 364,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 2535386,
+      "anomaly_seconds": 2538831,
       "latest_incident_link": null
     }
   ],
-  "alerts": [
-    {
-      "type": "alert",
-      "service": "OpenAI",
-      "level": "warn",
-      "message": "OpenAI is in WARN state (sampled 2026-07-18T10:36:29Z)"
-    }
-  ]
+  "alerts": []
 }
