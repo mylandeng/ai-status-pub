@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-24T09:34:34Z",
+  "generated_at": "2026-07-24T11:20:52Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-07-24T09:34:33Z",
+      "time": "2026-07-24T11:20:52Z",
       "overall_status": "minor",
       "components": [
         {
@@ -84,12 +84,12 @@
         },
         {
           "name": "VS Code extension",
-          "status": "degraded_performance",
+          "status": "operational",
           "updated_at": "2026-07-09T19:25:56Z"
         },
         {
           "name": "Codex API",
-          "status": "degraded_performance",
+          "status": "operational",
           "updated_at": "2026-07-09T19:25:56Z"
         },
         {
@@ -119,7 +119,7 @@
         },
         {
           "name": "ChatGPT Work",
-          "status": "operational",
+          "status": "degraded_performance",
           "updated_at": "2026-07-09T19:25:56Z"
         },
         {
@@ -130,67 +130,57 @@
       ],
       "active_incidents": [
         {
-          "id": "01KY9HYHCMK8AND23B4X17XQEK",
-          "name": "Elevated Errors in Codex Review",
-          "status": "monitoring",
-          "impact": "minor",
-          "shortlink": null,
-          "started_at": "2026-07-24T07:55:28Z",
-          "updated_at": "2026-07-24T08:11:36Z",
-          "url": null
-        },
-        {
           "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
           "name": "Elevated Error Rates",
-          "status": "monitoring",
+          "status": "investigating",
           "impact": "minor",
           "shortlink": null,
           "started_at": "2026-07-23T15:36:02Z",
-          "updated_at": "2026-07-23T20:22:48Z",
+          "updated_at": "2026-07-24T10:06:05Z",
           "url": null
         }
       ],
       "raw_score": 70,
       "confidence": 0.98,
-      "updated_at": "2026-07-24T08:11:36Z",
+      "updated_at": "2026-07-24T10:06:05Z",
       "source_url": "https://status.openai.com",
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-07-23T16:54:00Z",
-      "consecutive_anomalies": 11,
+      "consecutive_anomalies": 12,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 60033,
+      "anomaly_seconds": 66412,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-07-24T09:34:34Z",
-      "overall_status": "minor",
+      "time": "2026-07-24T11:20:52Z",
+      "overall_status": "none",
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance",
-          "updated_at": "2026-07-24T09:09:56.989Z"
+          "status": "operational",
+          "updated_at": "2026-07-24T09:35:08.442Z"
         },
         {
           "name": "Claude Console (platform.claude.com)",
-          "status": "degraded_performance",
-          "updated_at": "2026-07-24T09:09:57.005Z"
+          "status": "operational",
+          "updated_at": "2026-07-24T09:35:08.458Z"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "degraded_performance",
-          "updated_at": "2026-07-24T09:09:57.021Z"
+          "status": "operational",
+          "updated_at": "2026-07-24T09:35:08.473Z"
         },
         {
           "name": "Claude Code",
-          "status": "degraded_performance",
-          "updated_at": "2026-07-24T09:09:57.039Z"
+          "status": "operational",
+          "updated_at": "2026-07-24T09:35:08.489Z"
         },
         {
           "name": "Claude Cowork",
-          "status": "degraded_performance",
-          "updated_at": "2026-07-24T09:09:57.054Z"
+          "status": "operational",
+          "updated_at": "2026-07-24T09:35:08.504Z"
         },
         {
           "name": "Claude for Government",
@@ -199,16 +189,6 @@
         }
       ],
       "active_incidents": [
-        {
-          "id": "0lbk5m7mbqk5",
-          "name": "Elevated error rate on Opus 4.8",
-          "status": "investigating",
-          "impact": "minor",
-          "shortlink": "https://stspg.io/7xtkzmk161g1",
-          "started_at": "2026-07-24T09:09:56.943Z",
-          "updated_at": "2026-07-24T09:09:57.096Z",
-          "url": "https://stspg.io/7xtkzmk161g1"
-        },
         {
           "id": "yc7mr2gvl914",
           "name": "Microsoft Office add-in availability",
@@ -220,39 +200,39 @@
           "url": "https://stspg.io/62bq6fn8w887"
         }
       ],
-      "raw_score": 70,
+      "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-07-24T09:21:28.144Z",
+      "updated_at": "2026-07-24T10:53:59.024Z",
       "source_url": "https://status.claude.com",
-      "level": "warn",
+      "level": "ok",
       "error": null,
-      "first_anomaly_at": "2026-07-24T09:34:34Z",
-      "consecutive_anomalies": 1,
-      "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
-      "latest_incident_link": "https://stspg.io/7xtkzmk161g1"
+      "first_anomaly_at": null,
+      "consecutive_anomalies": 0,
+      "consecutive_recoveries": 1,
+      "anomaly_seconds": null,
+      "latest_incident_link": "https://stspg.io/62bq6fn8w887"
     },
     {
       "service": "Gemini",
-      "time": "2026-07-24T09:34:34Z",
+      "time": "2026-07-24T11:20:52Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-07-24T09:34:34Z",
+      "updated_at": "2026-07-24T11:20:52Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 450,
+      "consecutive_recoveries": 451,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-07-24T09:34:34Z",
+      "time": "2026-07-24T11:20:52Z",
       "overall_status": "operational",
       "components": [
         {
@@ -269,13 +249,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 450,
+      "consecutive_recoveries": 451,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-07-24T09:34:34Z",
+      "time": "2026-07-24T11:20:52Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -320,9 +300,9 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 450,
+      "consecutive_anomalies": 451,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 3050071,
+      "anomaly_seconds": 3056449,
       "latest_incident_link": null
     }
   ],
