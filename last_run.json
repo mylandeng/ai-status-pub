@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-25T22:31:18Z",
+  "generated_at": "2026-07-25T23:35:06Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-07-25T22:31:17Z",
+      "time": "2026-07-25T23:35:05Z",
       "overall_status": "minor",
       "components": [
         {
@@ -132,29 +132,29 @@
         {
           "id": "01KYDN6YPS6ARY1EC9089N089G",
           "name": "Elevated errors affecting ChatGPT conversations",
-          "status": "investigating",
+          "status": "identified",
           "impact": "minor",
           "shortlink": null,
           "started_at": "2026-07-25T22:09:27Z",
-          "updated_at": "2026-07-25T22:09:27Z",
+          "updated_at": "2026-07-25T23:16:12Z",
           "url": null
         }
       ],
       "raw_score": 70,
       "confidence": 0.98,
-      "updated_at": "2026-07-25T22:09:27Z",
+      "updated_at": "2026-07-25T23:16:12Z",
       "source_url": "https://status.openai.com",
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-07-25T22:31:17Z",
-      "consecutive_anomalies": 1,
+      "consecutive_anomalies": 2,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
+      "anomaly_seconds": 3828,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-07-25T22:31:18Z",
+      "time": "2026-07-25T23:35:05Z",
       "overall_status": "none",
       "components": [
         {
@@ -197,31 +197,31 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 26,
+      "consecutive_recoveries": 27,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-07-25T22:31:18Z",
+      "time": "2026-07-25T23:35:05Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-07-25T22:31:18Z",
+      "updated_at": "2026-07-25T23:35:05Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 476,
+      "consecutive_recoveries": 477,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-07-25T22:31:18Z",
+      "time": "2026-07-25T23:35:06Z",
       "overall_status": "operational",
       "components": [
         {
@@ -238,13 +238,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 476,
+      "consecutive_recoveries": 477,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-07-25T22:31:18Z",
+      "time": "2026-07-25T23:35:06Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -289,11 +289,18 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 476,
+      "consecutive_anomalies": 477,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 3183075,
+      "anomaly_seconds": 3186903,
       "latest_incident_link": null
     }
   ],
-  "alerts": []
+  "alerts": [
+    {
+      "type": "alert",
+      "service": "OpenAI",
+      "level": "warn",
+      "message": "OpenAI is in WARN state (sampled 2026-07-25T23:35:05Z)"
+    }
+  ]
 }
