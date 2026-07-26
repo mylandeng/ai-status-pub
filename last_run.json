@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-26T22:36:36Z",
+  "generated_at": "2026-07-26T23:38:23Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-07-26T22:36:35Z",
+      "time": "2026-07-26T23:38:22Z",
       "overall_status": "none",
       "components": [
         {
@@ -147,14 +147,14 @@
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-07-25T22:31:17Z",
-      "consecutive_anomalies": 17,
+      "consecutive_anomalies": 18,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 86718,
+      "anomaly_seconds": 90425,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-07-26T22:36:36Z",
+      "time": "2026-07-26T23:38:22Z",
       "overall_status": "none",
       "components": [
         {
@@ -197,31 +197,31 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 11,
+      "consecutive_recoveries": 12,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-07-26T22:36:36Z",
+      "time": "2026-07-26T23:38:22Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-07-26T22:36:36Z",
+      "updated_at": "2026-07-26T23:38:22Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 492,
+      "consecutive_recoveries": 493,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-07-26T22:36:36Z",
+      "time": "2026-07-26T23:38:23Z",
       "overall_status": "operational",
       "components": [
         {
@@ -238,13 +238,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 492,
+      "consecutive_recoveries": 493,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-07-26T22:36:36Z",
+      "time": "2026-07-26T23:38:23Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -289,9 +289,9 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 492,
+      "consecutive_anomalies": 493,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 3269793,
+      "anomaly_seconds": 3273500,
       "latest_incident_link": null
     }
   ],
