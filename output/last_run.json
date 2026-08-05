@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-05T15:33:31Z",
+  "generated_at": "2026-08-05T17:06:09Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-08-05T15:33:30Z",
+      "time": "2026-08-05T17:06:09Z",
       "overall_status": "minor",
       "components": [
         {
@@ -44,7 +44,7 @@
         },
         {
           "name": "Files",
-          "status": "operational",
+          "status": "degraded_performance",
           "updated_at": "2026-07-09T19:25:56Z"
         },
         {
@@ -69,11 +69,6 @@
         },
         {
           "name": "Sora",
-          "status": "operational",
-          "updated_at": "2026-07-09T19:25:56Z"
-        },
-        {
-          "name": "GPTs",
           "status": "operational",
           "updated_at": "2026-07-09T19:25:56Z"
         },
@@ -126,9 +121,24 @@
           "name": "Embeddings",
           "status": "operational",
           "updated_at": "2026-07-09T19:25:56Z"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational",
+          "updated_at": "2026-07-09T19:25:56Z"
         }
       ],
       "active_incidents": [
+        {
+          "id": "01KZ9DMQD2GJ8JJWDN7572RH78",
+          "name": "Issues with Custom GPT actions",
+          "status": "investigating",
+          "impact": "minor",
+          "shortlink": null,
+          "started_at": "2026-08-05T16:55:54Z",
+          "updated_at": "2026-08-05T16:55:54Z",
+          "url": null
+        },
         {
           "id": "01KZ96S5HEWX0CX26W2WFYFKE6",
           "name": "Elevated errors with image generation",
@@ -142,19 +152,19 @@
       ],
       "raw_score": 70,
       "confidence": 0.98,
-      "updated_at": "2026-08-05T15:28:25Z",
+      "updated_at": "2026-08-05T16:55:54Z",
       "source_url": "https://status.openai.com",
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-08-05T15:33:30Z",
-      "consecutive_anomalies": 1,
+      "consecutive_anomalies": 2,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
+      "anomaly_seconds": 5559,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-08-05T15:33:30Z",
+      "time": "2026-08-05T17:06:09Z",
       "overall_status": "none",
       "components": [
         {
@@ -195,33 +205,33 @@
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
-      "first_anomaly_at": "2026-08-05T09:28:01Z",
+      "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1,
+      "consecutive_recoveries": 2,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-08-05T15:33:30Z",
+      "time": "2026-08-05T17:06:09Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-08-05T15:33:30Z",
+      "updated_at": "2026-08-05T17:06:09Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 620,
+      "consecutive_recoveries": 621,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-08-05T15:33:30Z",
+      "time": "2026-08-05T17:06:09Z",
       "overall_status": "operational",
       "components": [
         {
@@ -238,13 +248,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 620,
+      "consecutive_recoveries": 621,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-08-05T15:33:31Z",
+      "time": "2026-08-05T17:06:09Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -289,11 +299,24 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 620,
+      "consecutive_anomalies": 621,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 4108408,
+      "anomaly_seconds": 4113966,
       "latest_incident_link": null
     }
   ],
-  "alerts": []
+  "alerts": [
+    {
+      "type": "alert",
+      "service": "OpenAI",
+      "level": "warn",
+      "message": "OpenAI is in WARN state (sampled 2026-08-05T17:06:09Z)"
+    },
+    {
+      "type": "recover",
+      "service": "Claude",
+      "level": "ok",
+      "message": "Claude recovered"
+    }
+  ]
 }
