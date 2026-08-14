@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-14T00:41:13Z",
+  "generated_at": "2026-08-14T03:12:30Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-08-14T00:41:12Z",
+      "time": "2026-08-14T03:12:26Z",
       "overall_status": "none",
       "components": [
         {
@@ -135,93 +135,56 @@
       "source_url": "https://status.openai.com",
       "level": "ok",
       "error": null,
-      "first_anomaly_at": "2026-08-13T15:42:05Z",
+      "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1,
+      "consecutive_recoveries": 2,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-08-14T00:41:12Z",
-      "overall_status": "minor",
+      "time": "2026-08-14T03:12:30Z",
+      "overall_status": "error",
       "components": [
         {
-          "name": "claude.ai",
-          "status": "operational",
-          "updated_at": "2026-08-13T17:59:00.384Z"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational",
-          "updated_at": "2026-08-04T11:37:04.814Z"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational",
-          "updated_at": "2026-08-13T17:59:27.929Z"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational",
-          "updated_at": "2026-08-13T17:59:38.723Z"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "degraded_performance",
-          "updated_at": "2026-08-14T00:36:42.454Z"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational",
-          "updated_at": "2026-06-30T14:45:50.487Z"
+          "name": "Official source",
+          "status": "unreachable"
         }
       ],
-      "active_incidents": [
-        {
-          "id": "whnd2z49x3xf",
-          "name": "Service disruption on Claude Code on the web and related services",
-          "status": "investigating",
-          "impact": "minor",
-          "shortlink": "https://stspg.io/7b3qnvqbdf60",
-          "started_at": "2026-08-14T00:36:42.423Z",
-          "updated_at": "2026-08-14T00:36:42.490Z",
-          "url": "https://stspg.io/7b3qnvqbdf60"
-        }
-      ],
-      "raw_score": 70,
-      "confidence": 0.98,
-      "updated_at": "2026-08-14T00:36:42.492Z",
+      "active_incidents": [],
+      "raw_score": 50,
+      "confidence": 0.3,
+      "updated_at": "2026-08-14T03:12:30Z",
       "source_url": "https://status.claude.com",
-      "level": "warn",
-      "error": null,
+      "level": "unknown",
+      "error": "fetch failed for https://status.claude.com/api/v2/summary.json: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'status.claude.com'. (_ssl.c:1010)>",
       "first_anomaly_at": "2026-08-14T00:41:12Z",
-      "consecutive_anomalies": 1,
+      "consecutive_anomalies": 0,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
-      "latest_incident_link": "https://stspg.io/7b3qnvqbdf60"
+      "anomaly_seconds": null,
+      "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-08-14T00:41:12Z",
+      "time": "2026-08-14T03:12:30Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-08-14T00:41:12Z",
+      "updated_at": "2026-08-14T03:12:30Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 810,
+      "consecutive_recoveries": 811,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-08-14T00:41:12Z",
+      "time": "2026-08-14T03:12:30Z",
       "overall_status": "operational",
       "components": [
         {
@@ -238,13 +201,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 810,
+      "consecutive_recoveries": 811,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-08-14T00:41:13Z",
+      "time": "2026-08-14T03:12:30Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -289,11 +252,18 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 810,
+      "consecutive_anomalies": 811,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 4832470,
+      "anomaly_seconds": 4841547,
       "latest_incident_link": null
     }
   ],
-  "alerts": []
+  "alerts": [
+    {
+      "type": "recover",
+      "service": "OpenAI",
+      "level": "ok",
+      "message": "OpenAI recovered"
+    }
+  ]
 }
