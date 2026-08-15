@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-15T22:21:01Z",
+  "generated_at": "2026-08-15T22:43:20Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-08-15T22:21:00Z",
+      "time": "2026-08-15T22:43:19Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,13 +137,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 35,
+      "consecutive_recoveries": 36,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-08-15T22:21:00Z",
+      "time": "2026-08-15T22:43:19Z",
       "overall_status": "none",
       "components": [
         {
@@ -180,37 +180,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-08-15T21:49:12.022Z",
+      "updated_at": "2026-08-15T22:29:16.665Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 48,
+      "consecutive_recoveries": 49,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-08-15T22:21:00Z",
+      "time": "2026-08-15T22:43:19Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-08-15T22:21:00Z",
+      "updated_at": "2026-08-15T22:43:19Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 884,
+      "consecutive_recoveries": 885,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-08-15T22:21:01Z",
+      "time": "2026-08-15T22:43:19Z",
       "overall_status": "operational",
       "components": [
         {
@@ -227,13 +227,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 884,
+      "consecutive_recoveries": 885,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-08-15T22:21:01Z",
+      "time": "2026-08-15T22:43:20Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -258,11 +258,11 @@
           "name": "AWS Direct Connect / Frankfurt",
           "status": "1",
           "summary": "Increased Packet loss",
-          "updated_at": "2026-08-15T16:27:41Z",
+          "updated_at": "2026-08-15T22:26:42Z",
           "link": null,
           "region": "Frankfurt",
           "severity": "warn",
-          "latest_message": "Our co-location partner continues to work to resolve the underlying facility infrastructure issue at the Equinix FR5 location in Frankfurt, DEU. Access to the affected area is currently restricted due to safety concerns, which is impacting our ability to assess the physical condition of the network equipment and provide a more accurate recovery timeline. Based on current information, full recovery is not expected in the near term and may extend beyond today. AWS Direct Connect connections at this location remain impaired. Customers with redundant connections through other locations remain unaffected. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps <a href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\">here</a>. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps <a href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\">here</a>. We will provide another update by 3:30 PM PDT, or sooner if we have additional information to share."
+          "latest_message": "Our co-location partner is continuing work to restore safe access to the affected area at the Equinix FR5 location in Frankfurt, DEU. Once safe access has been secured, our engineers will be able to assess the affected network devices. We continue to closely track progress and will share an update by 9:30 PM PDT, or sooner as new information becomes available."
         },
         {
           "id": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
@@ -289,14 +289,14 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-08-15T16:27:41Z",
+      "updated_at": "2026-08-15T22:26:42Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 884,
+      "consecutive_anomalies": 885,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 4996858,
+      "anomaly_seconds": 4998197,
       "latest_incident_link": null
     }
   ],
