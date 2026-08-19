@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-19T14:51:25Z",
+  "generated_at": "2026-08-19T15:18:14Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-08-19T14:51:24Z",
+      "time": "2026-08-19T15:18:13Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,13 +137,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 33,
+      "consecutive_recoveries": 34,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-08-19T14:51:25Z",
+      "time": "2026-08-19T15:18:13Z",
       "overall_status": "none",
       "components": [
         {
@@ -180,37 +180,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-08-19T14:26:47.537Z",
+      "updated_at": "2026-08-19T14:59:25.733Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 6,
+      "consecutive_recoveries": 7,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-08-19T14:51:25Z",
+      "time": "2026-08-19T15:18:13Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-08-19T14:51:25Z",
+      "updated_at": "2026-08-19T15:18:13Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1045,
+      "consecutive_recoveries": 1046,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-08-19T14:51:25Z",
+      "time": "2026-08-19T15:18:13Z",
       "overall_status": "operational",
       "components": [
         {
@@ -227,15 +227,20 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 66,
+      "consecutive_recoveries": 67,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-08-19T14:51:25Z",
+      "time": "2026-08-19T15:18:14Z",
       "overall_status": "major_outage",
       "components": [
+        {
+          "name": "Amazon Elastic Compute Cloud / London",
+          "status": "degraded",
+          "region": "London"
+        },
         {
           "name": "Multiple services / UAE",
           "status": "degraded",
@@ -248,6 +253,17 @@
         }
       ],
       "active_incidents": [
+        {
+          "id": "arn:aws:health:eu-west-2::event/EC2/AWS_EC2_OPERATIONAL_ISSUE/AWS_EC2_OPERATIONAL_ISSUE_25280_73B0FC79387",
+          "name": "Amazon Elastic Compute Cloud / London",
+          "status": "1",
+          "summary": "Increased Error Rates",
+          "updated_at": "2026-08-19T15:15:14Z",
+          "link": null,
+          "region": "London",
+          "severity": "warn",
+          "latest_message": "We are investigating an issue that is impacting launching new EC2 instances and resources in a newly launched Availability Zone (euw2-az4) in the EU-WEST-2 Region. During this time, affected customers may experience issues when creating or modifying resources in the Region. Other AWS services may also be impacted. For immediate recovery, we recommend that customers use alternative Availability Zones (euw2-az1, euw2-az2, and euw2-az3) where applicable. Existing running instances and resources are not affected. We will provide another update by 10:00 AM PDT, or sooner if we have additional information to share."
+        },
         {
           "id": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
           "name": "Multiple services / UAE",
@@ -273,14 +289,14 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-04-30T07:25:54Z",
+      "updated_at": "2026-08-19T15:15:14Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1045,
+      "consecutive_anomalies": 1046,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 5315482,
+      "anomaly_seconds": 5317091,
       "latest_incident_link": null
     }
   ],
