@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-27T19:59:08Z",
+  "generated_at": "2026-08-28T04:09:47Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-08-27T19:59:07Z",
+      "time": "2026-08-28T04:09:46Z",
       "overall_status": "none",
       "components": [
         {
@@ -133,33 +133,22 @@
           "updated_at": "2026-07-09T19:25:56Z"
         }
       ],
-      "active_incidents": [
-        {
-          "id": "01M1263309PD7VYV8EF95W2M2P",
-          "name": "Users may experience an increase in error rates in Workspace Agents and ChatGPT Work on Web and Mobile",
-          "status": "monitoring",
-          "impact": "minor",
-          "shortlink": null,
-          "started_at": "2026-08-27T18:00:38Z",
-          "updated_at": "2026-08-27T19:07:24Z",
-          "url": null
-        }
-      ],
-      "raw_score": 70,
+      "active_incidents": [],
+      "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-08-27T19:07:24Z",
+      "updated_at": "2026-07-09T19:25:56Z",
       "source_url": "https://status.openai.com",
-      "level": "warn",
+      "level": "ok",
       "error": null,
-      "first_anomaly_at": "2026-08-27T19:59:07Z",
-      "consecutive_anomalies": 1,
-      "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
+      "first_anomaly_at": null,
+      "consecutive_anomalies": 0,
+      "consecutive_recoveries": 1,
+      "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-08-27T19:59:07Z",
+      "time": "2026-08-28T04:09:46Z",
       "overall_status": "none",
       "components": [
         {
@@ -196,37 +185,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-08-27T19:13:46.127Z",
+      "updated_at": "2026-08-28T01:47:25.819Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 88,
+      "consecutive_recoveries": 89,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-08-27T19:59:07Z",
+      "time": "2026-08-28T04:09:46Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-08-27T19:59:07Z",
+      "updated_at": "2026-08-28T04:09:46Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1341,
+      "consecutive_recoveries": 1342,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-08-27T19:59:07Z",
+      "time": "2026-08-28T04:09:47Z",
       "overall_status": "operational",
       "components": [
         {
@@ -243,13 +232,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 362,
+      "consecutive_recoveries": 363,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-08-27T19:59:07Z",
+      "time": "2026-08-28T04:09:47Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -294,9 +283,9 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1341,
+      "consecutive_anomalies": 1342,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 6025144,
+      "anomaly_seconds": 6054584,
       "latest_incident_link": null
     }
   ],
