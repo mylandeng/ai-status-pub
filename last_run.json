@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-31T15:26:44Z",
+  "generated_at": "2026-08-31T20:59:12Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-08-31T15:26:43Z",
-      "overall_status": "major",
+      "time": "2026-08-31T20:59:11Z",
+      "overall_status": "none",
       "components": [
         {
           "name": "Responses",
@@ -133,39 +133,28 @@
           "updated_at": "2026-07-09T19:25:56Z"
         }
       ],
-      "active_incidents": [
-        {
-          "id": "01M1C5M4K0WC8PPT0Z175RJA1E",
-          "name": "ChatGPT Work seeing elevated errors and latency",
-          "status": "identified",
-          "impact": "major",
-          "shortlink": null,
-          "started_at": "2026-08-31T15:04:53Z",
-          "updated_at": "2026-08-31T15:21:30Z",
-          "url": null
-        }
-      ],
-      "raw_score": 20,
+      "active_incidents": [],
+      "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-08-31T15:21:30Z",
+      "updated_at": "2026-07-09T19:25:56Z",
       "source_url": "https://status.openai.com",
-      "level": "critical",
+      "level": "ok",
       "error": null,
-      "first_anomaly_at": "2026-08-31T15:26:43Z",
-      "consecutive_anomalies": 1,
-      "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
+      "first_anomaly_at": null,
+      "consecutive_anomalies": 0,
+      "consecutive_recoveries": 1,
+      "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-08-31T15:26:43Z",
+      "time": "2026-08-31T20:59:11Z",
       "overall_status": "none",
       "components": [
         {
           "name": "claude.ai",
           "status": "operational",
-          "updated_at": "2026-08-24T20:26:21.517Z"
+          "updated_at": "2026-08-31T20:36:00.214Z"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -180,7 +169,7 @@
         {
           "name": "Claude Code",
           "status": "operational",
-          "updated_at": "2026-08-28T20:21:18.404Z"
+          "updated_at": "2026-08-31T20:36:00.249Z"
         },
         {
           "name": "Claude Cowork",
@@ -196,37 +185,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-08-31T14:59:42.356Z",
+      "updated_at": "2026-08-31T20:36:00.319Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 106,
+      "consecutive_recoveries": 107,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-08-31T15:26:43Z",
+      "time": "2026-08-31T20:59:12Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-08-31T15:26:43Z",
+      "updated_at": "2026-08-31T20:59:12Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1359,
+      "consecutive_recoveries": 1360,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-08-31T15:26:43Z",
+      "time": "2026-08-31T20:59:12Z",
       "overall_status": "operational",
       "components": [
         {
@@ -243,13 +232,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 380,
+      "consecutive_recoveries": 381,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-08-31T15:26:43Z",
+      "time": "2026-08-31T20:59:12Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -294,9 +283,9 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1359,
+      "consecutive_anomalies": 1360,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 6354400,
+      "anomaly_seconds": 6374349,
       "latest_incident_link": null
     }
   ],
