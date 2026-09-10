@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-10T13:48:39Z",
+  "generated_at": "2026-09-10T17:18:38Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-09-10T13:48:38Z",
-      "overall_status": "minor",
+      "time": "2026-09-10T17:18:37Z",
+      "overall_status": "none",
       "components": [
         {
           "name": "Responses",
@@ -133,34 +133,23 @@
           "updated_at": "2026-07-09T19:25:56Z"
         }
       ],
-      "active_incidents": [
-        {
-          "id": "01M24HYC9SX2Q4471EVMY6EXQE",
-          "name": "Unable to open shared ChatGPT Project using direct link",
-          "status": "monitoring",
-          "impact": "minor",
-          "shortlink": null,
-          "started_at": "2026-09-10T02:21:57Z",
-          "updated_at": "2026-09-10T12:06:23Z",
-          "url": null
-        }
-      ],
-      "raw_score": 70,
+      "active_incidents": [],
+      "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-09-10T12:06:23Z",
+      "updated_at": "2026-07-09T19:25:56Z",
       "source_url": "https://status.openai.com",
-      "level": "warn",
+      "level": "ok",
       "error": null,
       "first_anomaly_at": "2026-09-10T05:04:52Z",
-      "consecutive_anomalies": 3,
-      "consecutive_recoveries": 0,
-      "anomaly_seconds": 31426,
+      "consecutive_anomalies": 0,
+      "consecutive_recoveries": 1,
+      "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-09-10T13:48:38Z",
-      "overall_status": "none",
+      "time": "2026-09-10T17:18:37Z",
+      "overall_status": "minor",
       "components": [
         {
           "name": "claude.ai",
@@ -184,8 +173,8 @@
         },
         {
           "name": "Claude Cowork",
-          "status": "operational",
-          "updated_at": "2026-09-03T16:23:12.021Z"
+          "status": "degraded_performance",
+          "updated_at": "2026-09-10T15:54:10.154Z"
         },
         {
           "name": "Claude for Government",
@@ -193,40 +182,51 @@
           "updated_at": "2026-06-30T14:45:50.487Z"
         }
       ],
-      "active_incidents": [],
-      "raw_score": 100,
+      "active_incidents": [
+        {
+          "id": "r1pqn1kb4hvk",
+          "name": "Degraded functionality for Claude Cowork on Windows",
+          "status": "identified",
+          "impact": "minor",
+          "shortlink": "https://stspg.io/5yp3rhhztm30",
+          "started_at": "2026-09-10T15:54:10.108Z",
+          "updated_at": "2026-09-10T17:06:53.231Z",
+          "url": "https://stspg.io/5yp3rhhztm30"
+        }
+      ],
+      "raw_score": 70,
       "confidence": 0.98,
-      "updated_at": "2026-09-10T12:09:25.812Z",
+      "updated_at": "2026-09-10T17:06:53.235Z",
       "source_url": "https://status.claude.com",
-      "level": "ok",
+      "level": "warn",
       "error": null,
-      "first_anomaly_at": null,
-      "consecutive_anomalies": 0,
-      "consecutive_recoveries": 52,
-      "anomaly_seconds": null,
-      "latest_incident_link": null
+      "first_anomaly_at": "2026-09-10T17:18:37Z",
+      "consecutive_anomalies": 1,
+      "consecutive_recoveries": 0,
+      "anomaly_seconds": 0,
+      "latest_incident_link": "https://stspg.io/5yp3rhhztm30"
     },
     {
       "service": "Gemini",
-      "time": "2026-09-10T13:48:38Z",
+      "time": "2026-09-10T17:18:37Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-09-10T13:48:38Z",
+      "updated_at": "2026-09-10T17:18:37Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1430,
+      "consecutive_recoveries": 1431,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-09-10T13:48:38Z",
+      "time": "2026-09-10T17:18:37Z",
       "overall_status": "operational",
       "components": [
         {
@@ -243,13 +243,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 52,
+      "consecutive_recoveries": 53,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-09-10T13:48:39Z",
+      "time": "2026-09-10T17:18:37Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -294,9 +294,9 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1430,
+      "consecutive_anomalies": 1431,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 7212516,
+      "anomaly_seconds": 7225114,
       "latest_incident_link": null
     }
   ],
