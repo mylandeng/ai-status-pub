@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-10T05:04:53Z",
+  "generated_at": "2026-09-10T09:38:00Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-09-10T05:04:52Z",
+      "time": "2026-09-10T09:37:59Z",
       "overall_status": "minor",
       "components": [
         {
@@ -137,29 +137,29 @@
         {
           "id": "01M24HYC9SX2Q4471EVMY6EXQE",
           "name": "Unable to open shared ChatGPT Project using direct link",
-          "status": "investigating",
+          "status": "identified",
           "impact": "minor",
           "shortlink": null,
           "started_at": "2026-09-10T02:21:57Z",
-          "updated_at": "2026-09-10T02:21:57Z",
+          "updated_at": "2026-09-10T09:37:49Z",
           "url": null
         }
       ],
       "raw_score": 70,
       "confidence": 0.98,
-      "updated_at": "2026-09-10T02:21:57Z",
+      "updated_at": "2026-09-10T09:37:49Z",
       "source_url": "https://status.openai.com",
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-09-10T05:04:52Z",
-      "consecutive_anomalies": 1,
+      "consecutive_anomalies": 2,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
+      "anomaly_seconds": 16387,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-09-10T05:04:52Z",
+      "time": "2026-09-10T09:38:00Z",
       "overall_status": "none",
       "components": [
         {
@@ -196,37 +196,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-09-10T04:59:24.230Z",
+      "updated_at": "2026-09-10T09:24:18.378Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 50,
+      "consecutive_recoveries": 51,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-09-10T05:04:52Z",
+      "time": "2026-09-10T09:38:00Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-09-10T05:04:52Z",
+      "updated_at": "2026-09-10T09:38:00Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1428,
+      "consecutive_recoveries": 1429,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-09-10T05:04:52Z",
+      "time": "2026-09-10T09:38:00Z",
       "overall_status": "operational",
       "components": [
         {
@@ -237,19 +237,19 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.85,
-      "updated_at": "2026-09-03T17:10:57Z",
+      "updated_at": "2026-09-10T07:17:35Z",
       "source_url": "https://status.x.ai/",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 50,
+      "consecutive_recoveries": 51,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-09-10T05:04:53Z",
+      "time": "2026-09-10T09:38:00Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -294,11 +294,18 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1428,
+      "consecutive_anomalies": 1429,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 7181090,
+      "anomaly_seconds": 7197477,
       "latest_incident_link": null
     }
   ],
-  "alerts": []
+  "alerts": [
+    {
+      "type": "alert",
+      "service": "OpenAI",
+      "level": "warn",
+      "message": "OpenAI is in WARN state (sampled 2026-09-10T09:37:59Z)"
+    }
+  ]
 }
