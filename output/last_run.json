@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-11T13:00:24Z",
+  "generated_at": "2026-09-11T17:00:28Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-09-11T13:00:23Z",
-      "overall_status": "none",
+      "time": "2026-09-11T17:00:27Z",
+      "overall_status": "minor",
       "components": [
         {
           "name": "Images",
@@ -133,28 +133,39 @@
           "updated_at": "2026-07-09T19:25:56Z"
         }
       ],
-      "active_incidents": [],
-      "raw_score": 100,
+      "active_incidents": [
+        {
+          "id": "01M28MEQWTQJDRCRPFD9FWQ0H3",
+          "name": "1% of ChatGPT Work (mobile/web) turns are failing",
+          "status": "investigating",
+          "impact": "minor",
+          "shortlink": null,
+          "started_at": "2026-09-11T16:22:49Z",
+          "updated_at": "2026-09-11T16:22:49Z",
+          "url": null
+        }
+      ],
+      "raw_score": 70,
       "confidence": 0.98,
-      "updated_at": "2026-07-09T19:25:56Z",
+      "updated_at": "2026-09-11T16:22:48Z",
       "source_url": "https://status.openai.com",
-      "level": "ok",
+      "level": "warn",
       "error": null,
-      "first_anomaly_at": null,
-      "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1,
-      "anomaly_seconds": null,
+      "first_anomaly_at": "2026-09-11T17:00:27Z",
+      "consecutive_anomalies": 1,
+      "consecutive_recoveries": 0,
+      "anomaly_seconds": 0,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-09-11T13:00:24Z",
+      "time": "2026-09-11T17:00:27Z",
       "overall_status": "minor",
       "components": [
         {
           "name": "claude.ai",
           "status": "operational",
-          "updated_at": "2026-09-03T16:23:11.970Z"
+          "updated_at": "2026-09-11T14:28:27.269Z"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -164,17 +175,17 @@
         {
           "name": "Claude API (api.anthropic.com)",
           "status": "operational",
-          "updated_at": "2026-09-10T23:24:22.949Z"
+          "updated_at": "2026-09-11T14:28:27.286Z"
         },
         {
           "name": "Claude Code",
           "status": "operational",
-          "updated_at": "2026-09-03T16:23:12.003Z"
+          "updated_at": "2026-09-11T14:28:27.302Z"
         },
         {
           "name": "Claude Cowork",
-          "status": "degraded_performance",
-          "updated_at": "2026-09-10T15:54:10.154Z"
+          "status": "partial_outage",
+          "updated_at": "2026-09-11T14:19:51.592Z"
         },
         {
           "name": "Claude for Government",
@@ -187,46 +198,46 @@
           "id": "r1pqn1kb4hvk",
           "name": "Degraded functionality for Claude Cowork on Windows",
           "status": "identified",
-          "impact": "minor",
+          "impact": "major",
           "shortlink": "https://stspg.io/5yp3rhhztm30",
           "started_at": "2026-09-10T15:54:10.108Z",
-          "updated_at": "2026-09-10T17:20:39.594Z",
+          "updated_at": "2026-09-11T14:19:51.617Z",
           "url": "https://stspg.io/5yp3rhhztm30"
         }
       ],
-      "raw_score": 70,
+      "raw_score": 20,
       "confidence": 0.98,
-      "updated_at": "2026-09-11T12:29:16.723Z",
+      "updated_at": "2026-09-11T16:49:29.378Z",
       "source_url": "https://status.claude.com",
-      "level": "warn",
+      "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-09-10T17:18:37Z",
-      "consecutive_anomalies": 7,
+      "consecutive_anomalies": 8,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 70907,
+      "anomaly_seconds": 85310,
       "latest_incident_link": "https://stspg.io/5yp3rhhztm30"
     },
     {
       "service": "Gemini",
-      "time": "2026-09-11T13:00:24Z",
+      "time": "2026-09-11T17:00:27Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-09-11T13:00:24Z",
+      "updated_at": "2026-09-11T17:00:27Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1437,
+      "consecutive_recoveries": 1438,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-09-11T13:00:24Z",
+      "time": "2026-09-11T17:00:27Z",
       "overall_status": "operational",
       "components": [
         {
@@ -243,13 +254,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 59,
+      "consecutive_recoveries": 60,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-09-11T13:00:24Z",
+      "time": "2026-09-11T17:00:27Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -294,11 +305,18 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1437,
+      "consecutive_anomalies": 1438,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 7296021,
+      "anomaly_seconds": 7310424,
       "latest_incident_link": null
     }
   ],
-  "alerts": []
+  "alerts": [
+    {
+      "type": "escalate",
+      "service": "Claude",
+      "level": "critical",
+      "message": "Claude escalated to CRITICAL"
+    }
+  ]
 }
