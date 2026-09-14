@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-14T20:34:00Z",
+  "generated_at": "2026-09-14T23:25:39Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-09-14T20:33:59Z",
+      "time": "2026-09-14T23:25:38Z",
       "overall_status": "none",
       "components": [
         {
@@ -135,6 +135,16 @@
       ],
       "active_incidents": [
         {
+          "id": "01M2H3J1D6Y7RHAP49GRWGJAY0",
+          "name": "Degraded Performance affecting Agents API",
+          "status": "monitoring",
+          "impact": "none",
+          "shortlink": null,
+          "started_at": "2026-09-14T23:20:41Z",
+          "updated_at": "2026-09-14T23:20:41Z",
+          "url": null
+        },
+        {
           "id": "01M2GA8XTS6VB3QCDEGZ0HNAQ5",
           "name": "Elevated errors affecting Work Mode in ChatGPT",
           "status": "monitoring",
@@ -147,19 +157,19 @@
       ],
       "raw_score": 70,
       "confidence": 0.98,
-      "updated_at": "2026-09-14T19:42:08Z",
+      "updated_at": "2026-09-14T20:30:00Z",
       "source_url": "https://status.openai.com",
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-09-14T16:38:39Z",
-      "consecutive_anomalies": 2,
+      "consecutive_anomalies": 3,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 14120,
+      "anomaly_seconds": 24419,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-09-14T20:33:59Z",
+      "time": "2026-09-14T23:25:38Z",
       "overall_status": "none",
       "components": [
         {
@@ -196,37 +206,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-09-14T20:11:54.286Z",
+      "updated_at": "2026-09-14T21:37:34.005Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
-      "first_anomaly_at": "2026-09-10T17:18:37Z",
+      "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1,
+      "consecutive_recoveries": 2,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-09-14T20:33:59Z",
+      "time": "2026-09-14T23:25:38Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-09-14T20:33:59Z",
+      "updated_at": "2026-09-14T23:25:38Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1461,
+      "consecutive_recoveries": 1462,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-09-14T20:33:59Z",
+      "time": "2026-09-14T23:25:38Z",
       "overall_status": "operational",
       "components": [
         {
@@ -243,13 +253,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 83,
+      "consecutive_recoveries": 84,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-09-14T20:34:00Z",
+      "time": "2026-09-14T23:25:38Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -294,18 +304,18 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1461,
+      "consecutive_anomalies": 1462,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 7582437,
+      "anomaly_seconds": 7592735,
       "latest_incident_link": null
     }
   ],
   "alerts": [
     {
-      "type": "alert",
-      "service": "OpenAI",
-      "level": "warn",
-      "message": "OpenAI is in WARN state (sampled 2026-09-14T20:33:59Z)"
+      "type": "recover",
+      "service": "Claude",
+      "level": "ok",
+      "message": "Claude recovered"
     }
   ]
 }
