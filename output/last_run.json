@@ -1,119 +1,19 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-01T08:47:02Z",
+  "generated_at": "2026-10-01T15:43:17Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-10-01T08:47:01Z",
+      "time": "2026-10-01T15:43:15Z",
       "overall_status": "minor",
       "components": [
-        {
-          "name": "Realtime",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Ads API",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Search",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Agent",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Connectors/Apps",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "File uploads",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "CLI",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Conversations",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "GPTs",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Image Generation",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "ChatGPT Work",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Batch",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Images",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
         {
           "name": "Chat Completions",
           "status": "operational",
           "updated_at": "2026-09-29T18:29:41Z"
         },
         {
-          "name": "Fine-tuning",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
           "name": "Responses",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Audio",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Moderations",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Files",
-          "status": "operational",
-          "updated_at": "2026-09-29T18:29:41Z"
-        },
-        {
-          "name": "Login",
           "status": "operational",
           "updated_at": "2026-09-29T18:29:41Z"
         },
@@ -128,7 +28,102 @@
           "updated_at": "2026-09-29T18:29:41Z"
         },
         {
-          "name": "dots",
+          "name": "Fine-tuning",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Images",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Batch",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Audio",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Realtime",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Files",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Login",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Conversations",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "ChatGPT Work",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Search",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "File uploads",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Voice mode",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "GPTs",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Image Generation",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Deep Research",
+          "status": "operational",
+          "updated_at": "2026-09-29T18:29:41Z"
+        },
+        {
+          "name": "Agent",
           "status": "operational",
           "updated_at": "2026-09-29T18:29:41Z"
         }
@@ -152,14 +147,14 @@
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-09-30T07:27:58Z",
-      "consecutive_anomalies": 6,
+      "consecutive_anomalies": 7,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 91143,
+      "anomaly_seconds": 116117,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-10-01T08:47:01Z",
+      "time": "2026-10-01T15:43:16Z",
       "overall_status": "none",
       "components": [
         {
@@ -196,37 +191,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-10-01T08:29:56.027Z",
+      "updated_at": "2026-10-01T11:05:13.883Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 52,
+      "consecutive_recoveries": 53,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-10-01T08:47:01Z",
+      "time": "2026-10-01T15:43:16Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-10-01T08:47:01Z",
+      "updated_at": "2026-10-01T15:43:16Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1562,
+      "consecutive_recoveries": 1563,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-10-01T08:47:01Z",
+      "time": "2026-10-01T15:43:16Z",
       "overall_status": "operational",
       "components": [
         {
@@ -243,13 +238,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 52,
+      "consecutive_recoveries": 53,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-10-01T08:47:02Z",
+      "time": "2026-10-01T15:43:16Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -294,9 +289,9 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1562,
+      "consecutive_anomalies": 1563,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 9008819,
+      "anomaly_seconds": 9033793,
       "latest_incident_link": null
     }
   ],
