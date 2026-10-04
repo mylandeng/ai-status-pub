@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-04T18:50:49Z",
+  "generated_at": "2026-10-04T22:01:33Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-10-04T18:50:47Z",
+      "time": "2026-10-04T22:01:32Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,13 +137,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 12,
+      "consecutive_recoveries": 13,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-10-04T18:50:48Z",
+      "time": "2026-10-04T22:01:32Z",
       "overall_status": "none",
       "components": [
         {
@@ -180,37 +180,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-10-04T18:21:07.970Z",
+      "updated_at": "2026-10-04T19:54:29.024Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 16,
+      "consecutive_recoveries": 17,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-10-04T18:50:48Z",
+      "time": "2026-10-04T22:01:32Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-10-04T18:50:48Z",
+      "updated_at": "2026-10-04T22:01:32Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1580,
+      "consecutive_recoveries": 1581,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-10-04T18:50:48Z",
+      "time": "2026-10-04T22:01:32Z",
       "overall_status": "operational",
       "components": [
         {
@@ -227,13 +227,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 70,
+      "consecutive_recoveries": 71,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-10-04T18:50:48Z",
+      "time": "2026-10-04T22:01:33Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -256,13 +256,13 @@
         {
           "id": "arn:aws:health:eu-south-2::event/INTERNETCONNECTIVITY/AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE/AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE_F4DC4_40592306093",
           "name": "AWS Internet Connectivity / Spain",
-          "status": "1",
-          "summary": "Elevated packet loss",
-          "updated_at": "2026-10-04T18:45:47Z",
+          "status": "0",
+          "summary": "[RESOLVED] Elevated packet loss",
+          "updated_at": "2026-10-04T18:56:53Z",
           "link": null,
           "region": "Spain",
           "severity": "warn",
-          "latest_message": "We are seeing early signs of recovery. We will provide you with another update by 12:00 PM PDT."
+          "latest_message": "Between 8:48 AM and 11:28 AM PDT, we experienced elevated packet loss within a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region. This issue resulted in elevated API latencies and error rates for multiple workflows and AWS Services. We were automatically alerted to the issue at 8:54 AM, and immediately began work to identify the root cause while taking multiple parallel paths to mitigate the issue. By 10:00 AM, our mitigation efforts had led to some improvements. By 10:38 AM, we identified the root cause as related to a networking configuration change that we were able to revert the change which led to full mitigation by 11:28 AM. The issue has been resolved and the service is operating normally."
         },
         {
           "id": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
@@ -289,14 +289,14 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-10-04T18:45:47Z",
+      "updated_at": "2026-10-04T18:56:53Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1580,
+      "consecutive_anomalies": 1581,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 9304245,
+      "anomaly_seconds": 9315690,
       "latest_incident_link": null
     }
   ],
