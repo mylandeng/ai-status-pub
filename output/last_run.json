@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-04T15:51:41Z",
+  "generated_at": "2026-10-04T18:50:49Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-10-04T15:51:41Z",
+      "time": "2026-10-04T18:50:47Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,13 +137,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 11,
+      "consecutive_recoveries": 12,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-10-04T15:51:41Z",
+      "time": "2026-10-04T18:50:48Z",
       "overall_status": "none",
       "components": [
         {
@@ -180,37 +180,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-10-04T11:28:18.889Z",
+      "updated_at": "2026-10-04T18:21:07.970Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 15,
+      "consecutive_recoveries": 16,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-10-04T15:51:41Z",
+      "time": "2026-10-04T18:50:48Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-10-04T15:51:41Z",
+      "updated_at": "2026-10-04T18:50:48Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1579,
+      "consecutive_recoveries": 1580,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-10-04T15:51:41Z",
+      "time": "2026-10-04T18:50:48Z",
       "overall_status": "operational",
       "components": [
         {
@@ -227,15 +227,20 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 69,
+      "consecutive_recoveries": 70,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-10-04T15:51:41Z",
+      "time": "2026-10-04T18:50:48Z",
       "overall_status": "major_outage",
       "components": [
+        {
+          "name": "AWS Internet Connectivity / Spain",
+          "status": "degraded",
+          "region": "Spain"
+        },
         {
           "name": "Multiple services / UAE",
           "status": "degraded",
@@ -248,6 +253,17 @@
         }
       ],
       "active_incidents": [
+        {
+          "id": "arn:aws:health:eu-south-2::event/INTERNETCONNECTIVITY/AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE/AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE_F4DC4_40592306093",
+          "name": "AWS Internet Connectivity / Spain",
+          "status": "1",
+          "summary": "Elevated packet loss",
+          "updated_at": "2026-10-04T18:45:47Z",
+          "link": null,
+          "region": "Spain",
+          "severity": "warn",
+          "latest_message": "We are seeing early signs of recovery. We will provide you with another update by 12:00 PM PDT."
+        },
         {
           "id": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
           "name": "Multiple services / UAE",
@@ -273,14 +289,14 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-09-15T10:27:10Z",
+      "updated_at": "2026-10-04T18:45:47Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1579,
+      "consecutive_anomalies": 1580,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 9293498,
+      "anomaly_seconds": 9304245,
       "latest_incident_link": null
     }
   ],
