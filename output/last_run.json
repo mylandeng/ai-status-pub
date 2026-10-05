@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-05T14:58:28Z",
+  "generated_at": "2026-10-05T21:55:03Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-10-05T14:58:27Z",
+      "time": "2026-10-05T21:55:03Z",
       "overall_status": "minor",
       "components": [
         {
@@ -74,7 +74,7 @@
         },
         {
           "name": "Conversations",
-          "status": "operational",
+          "status": "degraded_performance",
           "updated_at": "2026-09-29T18:29:41Z"
         },
         {
@@ -130,6 +130,26 @@
       ],
       "active_incidents": [
         {
+          "id": "01M46KED6KQ6PR195KZYYVNY8W",
+          "name": "Elevated error rates in Codex Cloud",
+          "status": "monitoring",
+          "impact": "none",
+          "shortlink": null,
+          "started_at": "2026-10-05T17:58:04Z",
+          "updated_at": "2026-10-05T18:07:03Z",
+          "url": null
+        },
+        {
+          "id": "01M46G248GGHV9RSAJE82BZY1X",
+          "name": "Elevated errors in ChatGPT conversations",
+          "status": "monitoring",
+          "impact": "minor",
+          "shortlink": null,
+          "started_at": "2026-10-05T16:58:56Z",
+          "updated_at": "2026-10-05T17:55:04Z",
+          "url": null
+        },
+        {
           "id": "01M45E0JFFJZ6EQ3BWYPW74R2Z",
           "name": "Elevated Work Mode errors",
           "status": "monitoring",
@@ -142,19 +162,19 @@
       ],
       "raw_score": 70,
       "confidence": 0.98,
-      "updated_at": "2026-10-05T09:50:38Z",
+      "updated_at": "2026-10-05T18:07:03Z",
       "source_url": "https://status.openai.com",
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-10-05T14:58:27Z",
-      "consecutive_anomalies": 1,
+      "consecutive_anomalies": 2,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
+      "anomaly_seconds": 24996,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-10-05T14:58:27Z",
+      "time": "2026-10-05T21:55:03Z",
       "overall_status": "none",
       "components": [
         {
@@ -191,37 +211,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-10-05T13:24:59.241Z",
+      "updated_at": "2026-10-05T20:39:38.604Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 20,
+      "consecutive_recoveries": 21,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-10-05T14:58:28Z",
+      "time": "2026-10-05T21:55:03Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-10-05T14:58:28Z",
+      "updated_at": "2026-10-05T21:55:03Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1584,
+      "consecutive_recoveries": 1585,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-10-05T14:58:28Z",
+      "time": "2026-10-05T21:55:03Z",
       "overall_status": "operational",
       "components": [
         {
@@ -232,26 +252,21 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.85,
-      "updated_at": "2026-09-22T01:29:59Z",
+      "updated_at": "2026-10-05T21:55:03.534937Z",
       "source_url": "https://status.x.ai/",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 74,
+      "consecutive_recoveries": 75,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-10-05T14:58:28Z",
+      "time": "2026-10-05T21:55:03Z",
       "overall_status": "major_outage",
       "components": [
-        {
-          "name": "AWS Internet Connectivity / Spain",
-          "status": "degraded",
-          "region": "Spain"
-        },
         {
           "name": "Multiple services / UAE",
           "status": "degraded",
@@ -264,17 +279,6 @@
         }
       ],
       "active_incidents": [
-        {
-          "id": "arn:aws:health:eu-south-2::event/INTERNETCONNECTIVITY/AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE/AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE_F4DC4_40592306093",
-          "name": "AWS Internet Connectivity / Spain",
-          "status": "0",
-          "summary": "[RESOLVED] Elevated packet loss",
-          "updated_at": "2026-10-04T18:56:53Z",
-          "link": null,
-          "region": "Spain",
-          "severity": "warn",
-          "latest_message": "Between 8:48 AM and 11:28 AM PDT, we experienced elevated packet loss within a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region. This issue resulted in elevated API latencies and error rates for multiple workflows and AWS Services. We were automatically alerted to the issue at 8:54 AM, and immediately began work to identify the root cause while taking multiple parallel paths to mitigate the issue. By 10:00 AM, our mitigation efforts had led to some improvements. By 10:38 AM, we identified the root cause as related to a networking configuration change that we were able to revert the change which led to full mitigation by 11:28 AM. The issue has been resolved and the service is operating normally."
-        },
         {
           "id": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
           "name": "Multiple services / UAE",
@@ -300,16 +304,23 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-10-04T18:56:53Z",
+      "updated_at": "2026-09-15T10:27:10Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1584,
+      "consecutive_anomalies": 1585,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 9376705,
+      "anomaly_seconds": 9401700,
       "latest_incident_link": null
     }
   ],
-  "alerts": []
+  "alerts": [
+    {
+      "type": "alert",
+      "service": "OpenAI",
+      "level": "warn",
+      "message": "OpenAI is in WARN state (sampled 2026-10-05T21:55:03Z)"
+    }
+  ]
 }
