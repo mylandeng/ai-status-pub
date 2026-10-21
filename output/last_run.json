@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-21T12:57:22Z",
+  "generated_at": "2026-10-21T17:56:33Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-10-21T12:57:21Z",
+      "time": "2026-10-21T17:56:33Z",
       "overall_status": "none",
       "components": [
         {
@@ -128,22 +128,33 @@
           "updated_at": "2026-10-16T20:01:40Z"
         }
       ],
-      "active_incidents": [],
-      "raw_score": 100,
+      "active_incidents": [
+        {
+          "id": "01M5FD63HHDRPQPM5YMQWJ5HTN",
+          "name": "Elevated FedRAMP API error rates for Astra and Sol",
+          "status": "monitoring",
+          "impact": "minor",
+          "shortlink": null,
+          "started_at": "2026-10-21T14:17:32Z",
+          "updated_at": "2026-10-21T17:04:07Z",
+          "url": null
+        }
+      ],
+      "raw_score": 70,
       "confidence": 0.98,
-      "updated_at": "2026-10-16T20:01:40Z",
+      "updated_at": "2026-10-21T16:46:00Z",
       "source_url": "https://status.openai.com",
-      "level": "ok",
+      "level": "warn",
       "error": null,
-      "first_anomaly_at": null,
-      "consecutive_anomalies": 0,
-      "consecutive_recoveries": 34,
-      "anomaly_seconds": null,
+      "first_anomaly_at": "2026-10-21T17:56:33Z",
+      "consecutive_anomalies": 1,
+      "consecutive_recoveries": 0,
+      "anomaly_seconds": 0,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-10-21T12:57:21Z",
+      "time": "2026-10-21T17:56:33Z",
       "overall_status": "none",
       "components": [
         {
@@ -180,37 +191,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-10-21T12:55:01.477Z",
+      "updated_at": "2026-10-21T17:35:19.488Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 51,
+      "consecutive_recoveries": 52,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-10-21T12:57:21Z",
+      "time": "2026-10-21T17:56:33Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-10-21T12:57:21Z",
+      "updated_at": "2026-10-21T17:56:33Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1670,
+      "consecutive_recoveries": 1671,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-10-21T12:57:21Z",
+      "time": "2026-10-21T17:56:33Z",
       "overall_status": "operational",
       "components": [
         {
@@ -221,19 +232,19 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.85,
-      "updated_at": "2026-10-21T12:57:21.773359Z",
+      "updated_at": "2026-10-21T17:56:33.344785Z",
       "source_url": "https://status.x.ai/",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 160,
+      "consecutive_recoveries": 161,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-10-21T12:57:21Z",
+      "time": "2026-10-21T17:56:33Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -278,9 +289,9 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1670,
+      "consecutive_anomalies": 1671,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 10751838,
+      "anomaly_seconds": 10769790,
       "latest_incident_link": null
     }
   ],
