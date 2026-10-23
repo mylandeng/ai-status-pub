@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-23T18:58:05Z",
+  "generated_at": "2026-10-23T21:56:28Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-10-23T18:58:04Z",
+      "time": "2026-10-23T21:56:27Z",
       "overall_status": "none",
       "components": [
         {
@@ -128,22 +128,33 @@
           "updated_at": "2026-10-16T20:01:40Z"
         }
       ],
-      "active_incidents": [],
+      "active_incidents": [
+        {
+          "id": "01M5NAR5GZC5M7D0S7AQ6CGEEN",
+          "name": "Help Center Chat Support Degraded",
+          "status": "monitoring",
+          "impact": "none",
+          "shortlink": null,
+          "started_at": "2026-10-23T21:30:25Z",
+          "updated_at": "2026-10-23T21:52:07Z",
+          "url": null
+        }
+      ],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-10-16T20:01:40Z",
+      "updated_at": "2026-10-23T21:52:07Z",
       "source_url": "https://status.openai.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 5,
+      "consecutive_recoveries": 6,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-10-23T18:58:04Z",
+      "time": "2026-10-23T21:56:27Z",
       "overall_status": "none",
       "components": [
         {
@@ -180,37 +191,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-10-23T18:54:34.007Z",
+      "updated_at": "2026-10-23T21:51:28.994Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 9,
+      "consecutive_recoveries": 10,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-10-23T18:58:04Z",
+      "time": "2026-10-23T21:56:27Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-10-23T18:58:04Z",
+      "updated_at": "2026-10-23T21:56:27Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1683,
+      "consecutive_recoveries": 1684,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-10-23T18:58:04Z",
+      "time": "2026-10-23T21:56:27Z",
       "overall_status": "operational",
       "components": [
         {
@@ -221,19 +232,19 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.85,
-      "updated_at": "2026-10-23T18:58:04.916109Z",
+      "updated_at": "2026-10-23T21:56:27.556102Z",
       "source_url": "https://status.x.ai/",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 173,
+      "consecutive_recoveries": 174,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-10-23T18:58:05Z",
+      "time": "2026-10-23T21:56:27Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -278,9 +289,9 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1683,
+      "consecutive_anomalies": 1684,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 10946282,
+      "anomaly_seconds": 10956984,
       "latest_incident_link": null
     }
   ],
