@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-24T00:16:27Z",
+  "generated_at": "2026-10-24T04:45:54Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-10-24T00:16:25Z",
+      "time": "2026-10-24T04:45:54Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,19 +137,19 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 7,
+      "consecutive_recoveries": 8,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-10-24T00:16:25Z",
+      "time": "2026-10-24T04:45:54Z",
       "overall_status": "none",
       "components": [
         {
           "name": "claude.ai",
           "status": "operational",
-          "updated_at": "2026-10-24T00:11:20.760Z"
+          "updated_at": "2026-10-24T00:37:17.684Z"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -159,17 +159,17 @@
         {
           "name": "Claude API (api.anthropic.com)",
           "status": "operational",
-          "updated_at": "2026-10-24T00:11:20.789Z"
+          "updated_at": "2026-10-24T00:37:17.713Z"
         },
         {
           "name": "Claude Code",
           "status": "operational",
-          "updated_at": "2026-10-24T00:11:20.813Z"
+          "updated_at": "2026-10-24T00:37:17.741Z"
         },
         {
           "name": "Claude Cowork",
           "status": "operational",
-          "updated_at": "2026-10-24T00:11:20.836Z"
+          "updated_at": "2026-10-24T00:37:17.767Z"
         },
         {
           "name": "Claude for Government",
@@ -180,37 +180,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-10-24T00:11:20.904Z",
+      "updated_at": "2026-10-24T04:15:11.479Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 11,
+      "consecutive_recoveries": 12,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-10-24T00:16:25Z",
+      "time": "2026-10-24T04:45:54Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-10-24T00:16:25Z",
+      "updated_at": "2026-10-24T04:45:54Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1685,
+      "consecutive_recoveries": 1686,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-10-24T00:16:26Z",
+      "time": "2026-10-24T04:45:54Z",
       "overall_status": "operational",
       "components": [
         {
@@ -221,19 +221,19 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.85,
-      "updated_at": "2026-10-24T00:16:26.697227Z",
+      "updated_at": "2026-10-24T04:45:54.486566Z",
       "source_url": "https://status.x.ai/",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 175,
+      "consecutive_recoveries": 176,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-10-24T00:16:26Z",
+      "time": "2026-10-24T04:45:54Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -278,9 +278,9 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1685,
+      "consecutive_anomalies": 1686,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 10965383,
+      "anomaly_seconds": 10981551,
       "latest_incident_link": null
     }
   ],
