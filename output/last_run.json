@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-27T07:57:10Z",
+  "generated_at": "2026-10-27T14:06:30Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-10-27T07:57:07Z",
+      "time": "2026-10-27T14:06:30Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,19 +137,19 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 28,
+      "consecutive_recoveries": 29,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-10-27T07:57:08Z",
+      "time": "2026-10-27T14:06:30Z",
       "overall_status": "none",
       "components": [
         {
           "name": "claude.ai",
           "status": "operational",
-          "updated_at": "2026-10-25T08:30:46.949Z"
+          "updated_at": "2026-10-27T09:38:11.312Z"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -159,17 +159,17 @@
         {
           "name": "Claude API (api.anthropic.com)",
           "status": "operational",
-          "updated_at": "2026-10-25T08:30:46.975Z"
+          "updated_at": "2026-10-27T09:38:11.341Z"
         },
         {
           "name": "Claude Code",
           "status": "operational",
-          "updated_at": "2026-10-25T08:30:47.000Z"
+          "updated_at": "2026-10-27T09:38:11.365Z"
         },
         {
           "name": "Claude Cowork",
           "status": "operational",
-          "updated_at": "2026-10-25T08:30:47.026Z"
+          "updated_at": "2026-10-27T09:38:11.392Z"
         },
         {
           "name": "Claude for Government",
@@ -180,106 +180,60 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-10-27T06:04:36.839Z",
+      "updated_at": "2026-10-27T13:44:36.000Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 12,
+      "consecutive_recoveries": 13,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-10-27T07:57:09Z",
+      "time": "2026-10-27T14:06:30Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-10-27T07:57:09Z",
+      "updated_at": "2026-10-27T14:06:30Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1706,
+      "consecutive_recoveries": 1707,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-10-27T07:57:09Z",
-      "overall_status": "degraded_performance",
+      "time": "2026-10-27T14:06:30Z",
+      "overall_status": "operational",
       "components": [
         {
           "name": "xAI System",
-          "status": "warn"
+          "status": "ok"
         }
       ],
-      "active_incidents": [
-        {
-          "id": "ps_7e6bd6bbd3e53c30",
-          "name": "[Automations] Elevated errors affecting repository integrations",
-          "status": "warn",
-          "severity": "ok",
-          "link": "https://status.x.ai/automations/ps_7e6bd6bbd3e53c30",
-          "updated_at": "2026-10-27T07:33:08Z",
-          "raw_status": "<h3>Status: ACTIVE</h3><p>Severity: info</p><hr /><h4>Updates:</h4><div><p><strong>Tue, 27 Oct 2026 07:33:08 GMT</strong"
-        },
-        {
-          "id": "ps_7e6bd6bbd3e53c30",
-          "name": "[BugBot] Elevated errors affecting repository integrations",
-          "status": "warn",
-          "severity": "ok",
-          "link": "https://status.x.ai/bugbot/ps_7e6bd6bbd3e53c30",
-          "updated_at": "2026-10-27T07:33:08Z",
-          "raw_status": "<h3>Status: ACTIVE</h3><p>Severity: info</p><hr /><h4>Updates:</h4><div><p><strong>Tue, 27 Oct 2026 07:33:08 GMT</strong"
-        },
-        {
-          "id": "ps_7e6bd6bbd3e53c30",
-          "name": "[Cloud Agents] Elevated errors affecting repository integrations",
-          "status": "warn",
-          "severity": "ok",
-          "link": "https://status.x.ai/cloud-agents/ps_7e6bd6bbd3e53c30",
-          "updated_at": "2026-10-27T07:33:08Z",
-          "raw_status": "<h3>Status: ACTIVE</h3><p>Severity: info</p><hr /><h4>Updates:</h4><div><p><strong>Tue, 27 Oct 2026 07:33:08 GMT</strong"
-        },
-        {
-          "id": "ps_7e6bd6bbd3e53c30",
-          "name": "[Origin] Elevated errors affecting repository integrations",
-          "status": "warn",
-          "severity": "ok",
-          "link": "https://status.x.ai/origin/ps_7e6bd6bbd3e53c30",
-          "updated_at": "2026-10-27T07:33:08Z",
-          "raw_status": "<h3>Status: ACTIVE</h3><p>Severity: info</p><hr /><h4>Updates:</h4><div><p><strong>Tue, 27 Oct 2026 07:33:08 GMT</strong"
-        },
-        {
-          "id": "ps_7e6bd6bbd3e53c30",
-          "name": "[Review Agents] Elevated errors affecting repository integrations",
-          "status": "warn",
-          "severity": "ok",
-          "link": "https://status.x.ai/review-agents/ps_7e6bd6bbd3e53c30",
-          "updated_at": "2026-10-27T07:33:08Z",
-          "raw_status": "<h3>Status: ACTIVE</h3><p>Severity: info</p><hr /><h4>Updates:</h4><div><p><strong>Tue, 27 Oct 2026 07:33:08 GMT</strong"
-        }
-      ],
-      "raw_score": 70,
-      "confidence": 0.9,
-      "updated_at": "2026-10-27T07:57:09.640425Z",
+      "active_incidents": [],
+      "raw_score": 100,
+      "confidence": 0.85,
+      "updated_at": "2026-10-27T14:06:30.601751Z",
       "source_url": "https://status.x.ai/",
-      "level": "warn",
+      "level": "ok",
       "error": null,
-      "first_anomaly_at": "2026-10-27T07:57:09Z",
-      "consecutive_anomalies": 1,
-      "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
-      "latest_incident_link": "https://status.x.ai/automations/ps_7e6bd6bbd3e53c30"
+      "first_anomaly_at": null,
+      "consecutive_anomalies": 0,
+      "consecutive_recoveries": 1,
+      "anomaly_seconds": null,
+      "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-10-27T07:57:09Z",
+      "time": "2026-10-27T14:06:30Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -324,9 +278,9 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1706,
+      "consecutive_anomalies": 1707,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 11252226,
+      "anomaly_seconds": 11274387,
       "latest_incident_link": null
     }
   ],
