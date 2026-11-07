@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-06T22:05:33Z",
+  "generated_at": "2026-11-07T01:51:41Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-11-06T22:05:32Z",
+      "time": "2026-11-07T01:51:40Z",
       "overall_status": "none",
       "components": [
         {
@@ -131,30 +131,30 @@
       "active_incidents": [
         {
           "id": "01M6S2FV5TZWQ753NHRB7BF5K7",
-          "name": "Elevated error rates with Brex Cards and U.S. business Mastercards",
-          "status": "identified",
+          "name": "Elevated error rates with some U.S. business Mastercards",
+          "status": "monitoring",
           "impact": "none",
           "shortlink": null,
           "started_at": "2026-11-06T18:38:43Z",
-          "updated_at": "2026-11-06T18:50:47Z",
+          "updated_at": "2026-11-07T01:29:31Z",
           "url": null
         }
       ],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-11-06T18:50:47Z",
+      "updated_at": "2026-11-07T01:29:31Z",
       "source_url": "https://status.openai.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 3,
+      "consecutive_recoveries": 4,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-11-06T22:05:32Z",
+      "time": "2026-11-07T01:51:40Z",
       "overall_status": "none",
       "components": [
         {
@@ -191,37 +191,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-11-06T22:04:51.229Z",
+      "updated_at": "2026-11-07T01:04:55.474Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 58,
+      "consecutive_recoveries": 59,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-11-06T22:05:32Z",
+      "time": "2026-11-07T01:51:40Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-11-06T22:05:32Z",
+      "updated_at": "2026-11-07T01:51:40Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1752,
+      "consecutive_recoveries": 1753,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-11-06T22:05:32Z",
+      "time": "2026-11-07T01:51:41Z",
       "overall_status": "operational",
       "components": [
         {
@@ -232,21 +232,26 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.85,
-      "updated_at": "2026-11-06T22:05:32.817631Z",
+      "updated_at": "2026-11-07T01:51:41.058537Z",
       "source_url": "https://status.x.ai/",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 46,
+      "consecutive_recoveries": 47,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-11-06T22:05:32Z",
+      "time": "2026-11-07T01:51:41Z",
       "overall_status": "major_outage",
       "components": [
+        {
+          "name": "Amazon Elastic Compute Cloud / Oregon",
+          "status": "degraded",
+          "region": "Oregon"
+        },
         {
           "name": "Multiple services / UAE",
           "status": "degraded",
@@ -259,6 +264,17 @@
         }
       ],
       "active_incidents": [
+        {
+          "id": "arn:aws:health:us-west-2::event/EC2/AWS_EC2_OPERATIONAL_ISSUE/AWS_EC2_OPERATIONAL_ISSUE_62978_C9C1126888D",
+          "name": "Amazon Elastic Compute Cloud / Oregon",
+          "status": "0",
+          "summary": "[RESOLVED] Elevated Launch Failures",
+          "updated_at": "2026-11-07T01:12:16Z",
+          "link": null,
+          "region": "Oregon",
+          "severity": "warn",
+          "latest_message": "Between 2:35 PM and 4:21 PM PST, we experienced elevated EC2 instance launch failures affecting all AZs (usw2-az1, usw2-az2, usw2-az3, usw2-az4) in the US-WEST-2 Region. EC2 Instance Launches, AWS services that instantiated new instances, as well as services such as DataSync or AWS Backup which require new instances to support data transfers to or from the US-WEST-2 Region were affected. Our engineers were automatically engaged and immediately began investigating the root cause. We identified the issue to be caused by a subsystem that supports EBS Volumes required during instance launch. We began remediation of that issue at 3:20 PM, and completed full recovery at 4:21 PM. We recommend customers retry requests that failed during this time. Running EC2 instances and already created EBS volumes were not impacted and continued to operate as normal. The issue has been resolved and all AWS services are now operating normally."
+        },
         {
           "id": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
           "name": "Multiple services / UAE",
@@ -284,14 +300,14 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-09-15T10:27:10Z",
+      "updated_at": "2026-11-07T01:12:16Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1752,
+      "consecutive_anomalies": 1753,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 12167129,
+      "anomaly_seconds": 12180698,
       "latest_incident_link": null
     }
   ],
