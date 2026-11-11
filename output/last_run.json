@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-11T10:45:20Z",
+  "generated_at": "2026-11-11T18:06:43Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-11-11T10:45:19Z",
+      "time": "2026-11-11T18:06:43Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,13 +137,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 22,
+      "consecutive_recoveries": 23,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-11-11T10:45:19Z",
+      "time": "2026-11-11T18:06:43Z",
       "overall_status": "none",
       "components": [
         {
@@ -200,37 +200,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-11-11T09:20:06.224Z",
+      "updated_at": "2026-11-11T17:54:30.460Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 77,
+      "consecutive_recoveries": 78,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-11-11T10:45:20Z",
+      "time": "2026-11-11T18:06:43Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-11-11T10:45:20Z",
+      "updated_at": "2026-11-11T18:06:43Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1771,
+      "consecutive_recoveries": 1772,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-11-11T10:45:20Z",
+      "time": "2026-11-11T18:06:43Z",
       "overall_status": "operational",
       "components": [
         {
@@ -241,21 +241,26 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.85,
-      "updated_at": "2026-11-11T10:45:20.222557Z",
+      "updated_at": "2026-11-11T18:06:43.430169Z",
       "source_url": "https://status.x.ai/",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 65,
+      "consecutive_recoveries": 66,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-11-11T10:45:20Z",
+      "time": "2026-11-11T18:06:43Z",
       "overall_status": "major_outage",
       "components": [
+        {
+          "name": "Amazon Elastic Compute Cloud / Tokyo",
+          "status": "degraded",
+          "region": "Tokyo"
+        },
         {
           "name": "Multiple services / UAE",
           "status": "degraded",
@@ -268,6 +273,17 @@
         }
       ],
       "active_incidents": [
+        {
+          "id": "arn:aws:health:ap-northeast-1::event/EC2/AWS_EC2_OPERATIONAL_ISSUE/AWS_EC2_OPERATIONAL_ISSUE_EC778_EFC270B4609",
+          "name": "Amazon Elastic Compute Cloud / Tokyo",
+          "status": "1",
+          "summary": "Elevated API issues and Launch Failures",
+          "updated_at": "2026-11-11T17:59:22Z",
+          "link": null,
+          "region": "Tokyo",
+          "severity": "warn",
+          "latest_message": "We continue to see broad signs of recovery in the AP-NORTHEAST-1 Region. Our mitigation efforts are still underway, and we will provide you with another update on our progress by 10:45 AM PST or sooner as new information becomes available."
+        },
         {
           "id": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
           "name": "Multiple services / UAE",
@@ -293,14 +309,14 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-09-15T10:27:10Z",
+      "updated_at": "2026-11-11T17:59:22Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1771,
+      "consecutive_anomalies": 1772,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 12558317,
+      "anomaly_seconds": 12584800,
       "latest_incident_link": null
     }
   ],
