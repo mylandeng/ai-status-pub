@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-11T18:06:43Z",
+  "generated_at": "2026-11-12T00:35:06Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-11-11T18:06:43Z",
-      "overall_status": "none",
+      "time": "2026-11-12T00:35:05Z",
+      "overall_status": "critical",
       "components": [
         {
           "name": "Chat Completions",
@@ -128,22 +128,33 @@
           "updated_at": "2026-10-16T20:01:40Z"
         }
       ],
-      "active_incidents": [],
-      "raw_score": 100,
+      "active_incidents": [
+        {
+          "id": "01M76CW2D7FM7K7F8NJ4W0G08N",
+          "name": "Unable to start new Workspace Agent runs",
+          "status": "investigating",
+          "impact": "critical",
+          "shortlink": null,
+          "started_at": "2026-11-11T22:50:17Z",
+          "updated_at": "2026-11-11T22:50:17Z",
+          "url": null
+        }
+      ],
+      "raw_score": 20,
       "confidence": 0.98,
-      "updated_at": "2026-10-16T20:01:40Z",
+      "updated_at": "2026-11-11T22:50:17Z",
       "source_url": "https://status.openai.com",
-      "level": "ok",
+      "level": "critical",
       "error": null,
-      "first_anomaly_at": null,
-      "consecutive_anomalies": 0,
-      "consecutive_recoveries": 23,
-      "anomaly_seconds": null,
+      "first_anomaly_at": "2026-11-12T00:35:05Z",
+      "consecutive_anomalies": 1,
+      "consecutive_recoveries": 0,
+      "anomaly_seconds": 0,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-11-11T18:06:43Z",
+      "time": "2026-11-12T00:35:05Z",
       "overall_status": "none",
       "components": [
         {
@@ -200,37 +211,37 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-11-11T17:54:30.460Z",
+      "updated_at": "2026-11-12T00:04:01.187Z",
       "source_url": "https://status.claude.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 78,
+      "consecutive_recoveries": 79,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-11-11T18:06:43Z",
+      "time": "2026-11-12T00:35:05Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-11-11T18:06:43Z",
+      "updated_at": "2026-11-12T00:35:05Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1772,
+      "consecutive_recoveries": 1773,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-11-11T18:06:43Z",
+      "time": "2026-11-12T00:35:06Z",
       "overall_status": "operational",
       "components": [
         {
@@ -241,19 +252,19 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.85,
-      "updated_at": "2026-11-11T18:06:43.430169Z",
+      "updated_at": "2026-11-12T00:35:06.018302Z",
       "source_url": "https://status.x.ai/",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 66,
+      "consecutive_recoveries": 67,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-11-11T18:06:43Z",
+      "time": "2026-11-12T00:35:06Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -276,13 +287,13 @@
         {
           "id": "arn:aws:health:ap-northeast-1::event/EC2/AWS_EC2_OPERATIONAL_ISSUE/AWS_EC2_OPERATIONAL_ISSUE_EC778_EFC270B4609",
           "name": "Amazon Elastic Compute Cloud / Tokyo",
-          "status": "1",
-          "summary": "Elevated API issues and Launch Failures",
-          "updated_at": "2026-11-11T17:59:22Z",
+          "status": "0",
+          "summary": "[RESOLVED] Elevated API issues and Launch Failures",
+          "updated_at": "2026-11-11T21:11:29Z",
           "link": null,
           "region": "Tokyo",
           "severity": "warn",
-          "latest_message": "We continue to see broad signs of recovery in the AP-NORTHEAST-1 Region. Our mitigation efforts are still underway, and we will provide you with another update on our progress by 10:45 AM PST or sooner as new information becomes available."
+          "latest_message": "日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 2 時 46 分 (太平洋標準時 午前 6 時 46 分から午前 9 時 46 分) にかけて、主に単一のアベイラビリティーゾーン (apne1-az1) において、API エラー率の上昇および起動失敗が発生しておりました。また、ECS および Fargate のタスク起動失敗、ELB のプロビジョニング遅延、NAT Gateway の作成および関連付け解除ワークフローの失敗、Managed Flink アプリケーションの状態遷移の遅延など、他サービスにも影響が発生しておりました。稼働中の EC2 インスタンスおよび既存のワークフローには影響はございませんでした。この時間帯において、影響を受けているアベイラビリティーゾーンでは EC2 および EBS のヘルスデータが欠損または遅延し、CloudWatch アラームが INSUFFICIENT_DATA 状態に移行し、DescribeInstanceStatus API が Insufficient Data を返しておりました。\n根本原因を特定し、日本時間 2026 年 11 月 12 日 午前 0 時 47 分までに緩和策の実施を開始しました。日本時間 午前 2 時 46 分には API の広範な回復が見られ、新規 EC2 インスタンスの起動が成功するようになりました。完全な復旧を監視する中で、影響を受けた単一のアベイラビリティーゾーンにおける新規起動インスタンスで接続の問題が発生していることを確認し始めました。インスタンス間の接続、および影響発生前に起動されたインスタンスへの接続は影響を受けておりませんでした。この問題が最初の問題と同一の根本原因であることを特定することができました。\n接続の問題を軽減するために複数の対策を並行して実施し、日本時間 午前 4 時 51 分に接続の問題の回復の最初の兆候を確認し、日本時間 午前 5 時 31 分に完全に回復いたしました。問題は解決され、サービスは正常に稼働しております。 | Between 6:46 AM and 9:46 AM PST, we experienced elevated API error rates and launch failures primarily centered in a single Availability Zone (apne1-az1). We also experienced impact to other services such as ECS and Fargate Task Launch failures, ELB provisioning delays, Nat Gateway failures for Create and Disassociate workflows and Managed Flink application state transitions delays. Running EC2 instances and existing workflows were not affected. During this time, EC2 and EBS health data was missing or delayed for the affected Availability Zone resulting in CloudWatch alarms to transition to INSUFFICENT_DATA state and the DescribeInstanceStatus API to return Insufficient Data.\n\nWe had identified the root cause and began our mitigation efforts by 7:47 AM, and by 9:46 AM we were seeing broad recovery for APIs and were able to see new EC2 launches succeed. While monitoring for full recovery, we began to observe that new launches in the single affected Availability Zone were experiencing connectivity issues, instance to instance connectivity was unaffected as was instances launched before the impact began. We were able to identify that this shared a root cause to the initial issue. \n\nWe took multiple parallel paths to mitigate the connectivity issue, and saw first signs of recovery for the connectivity issue at 11:51 AM and full recovery by 12:31 PM. The issue has been resolved and the service is operating normally."
         },
         {
           "id": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
@@ -309,14 +320,14 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-11-11T17:59:22Z",
+      "updated_at": "2026-11-11T21:11:29Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1772,
+      "consecutive_anomalies": 1773,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 12584800,
+      "anomaly_seconds": 12608103,
       "latest_incident_link": null
     }
   ],
