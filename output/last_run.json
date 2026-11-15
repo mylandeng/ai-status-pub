@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-15T06:42:49Z",
+  "generated_at": "2026-11-15T14:19:56Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-11-15T06:42:48Z",
+      "time": "2026-11-15T14:19:55Z",
       "overall_status": "minor",
       "components": [
         {
@@ -147,14 +147,14 @@
       "level": "warn",
       "error": null,
       "first_anomaly_at": "2026-11-13T02:41:19Z",
-      "consecutive_anomalies": 10,
+      "consecutive_anomalies": 11,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 187289,
+      "anomaly_seconds": 214716,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-11-15T06:42:48Z",
+      "time": "2026-11-15T14:19:55Z",
       "overall_status": "minor",
       "components": [
         {
@@ -222,37 +222,37 @@
       ],
       "raw_score": 20,
       "confidence": 0.98,
-      "updated_at": "2026-11-15T06:09:24.276Z",
+      "updated_at": "2026-11-15T13:25:11.123Z",
       "source_url": "https://status.claude.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-11-14T09:30:28Z",
-      "consecutive_anomalies": 5,
+      "consecutive_anomalies": 6,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 76340,
+      "anomaly_seconds": 103767,
       "latest_incident_link": "https://stspg.io/4858wf40dx89"
     },
     {
       "service": "Gemini",
-      "time": "2026-11-15T06:42:48Z",
+      "time": "2026-11-15T14:19:55Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-11-15T06:42:48Z",
+      "updated_at": "2026-11-15T14:19:55Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1785,
+      "consecutive_recoveries": 1786,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-11-15T06:42:49Z",
+      "time": "2026-11-15T14:19:55Z",
       "overall_status": "operational",
       "components": [
         {
@@ -263,21 +263,26 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.85,
-      "updated_at": "2026-11-15T06:42:49.025867Z",
+      "updated_at": "2026-11-15T14:19:55.939574Z",
       "source_url": "https://status.x.ai/",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 79,
+      "consecutive_recoveries": 80,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-11-15T06:42:49Z",
+      "time": "2026-11-15T14:19:56Z",
       "overall_status": "major_outage",
       "components": [
+        {
+          "name": "Multiple services / N. Virginia",
+          "status": "degraded",
+          "region": "N. Virginia"
+        },
         {
           "name": "Multiple services / UAE",
           "status": "degraded",
@@ -290,6 +295,17 @@
         }
       ],
       "active_incidents": [
+        {
+          "id": "arn:aws:health:us-east-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_7EB95_9ACD11D39CE",
+          "name": "Multiple services / N. Virginia",
+          "status": "1",
+          "summary": "Increased Connectivity issues in US-EAST-1",
+          "updated_at": "2026-11-15T13:22:11Z",
+          "link": null,
+          "region": "N. Virginia",
+          "severity": "warn",
+          "latest_message": "We are seeing early signs of recovery for authentication via IAM Identity Center and SignUp."
+        },
         {
           "id": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
           "name": "Multiple services / UAE",
@@ -315,14 +331,14 @@
       ],
       "raw_score": 20,
       "confidence": 0.97,
-      "updated_at": "2026-09-15T10:27:10Z",
+      "updated_at": "2026-11-15T13:22:11Z",
       "source_url": "https://status.aws.amazon.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1785,
+      "consecutive_anomalies": 1786,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 12889366,
+      "anomaly_seconds": 12916793,
       "latest_incident_link": null
     }
   ],
