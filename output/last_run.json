@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-19T01:09:48Z",
+  "generated_at": "2026-11-19T08:46:22Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-11-19T01:09:47Z",
+      "time": "2026-11-19T08:46:21Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,19 +137,19 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 2,
+      "consecutive_recoveries": 3,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-11-19T01:09:47Z",
-      "overall_status": "minor",
+      "time": "2026-11-19T08:46:22Z",
+      "overall_status": "none",
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance",
-          "updated_at": "2026-11-17T18:56:06.152Z"
+          "status": "operational",
+          "updated_at": "2026-11-19T02:15:05.788Z"
         },
         {
           "name": "Claude Platform on AWS",
@@ -197,51 +197,40 @@
           "updated_at": "2026-11-09T18:33:14.270Z"
         }
       ],
-      "active_incidents": [
-        {
-          "id": "b5cq662qf2wm",
-          "name": "Claude unable to join meetings",
-          "status": "identified",
-          "impact": "minor",
-          "shortlink": "https://stspg.io/01qq3kzyyqzl",
-          "started_at": "2026-11-16T15:10:15.167Z",
-          "updated_at": "2026-11-18T01:29:51.981Z",
-          "url": "https://stspg.io/01qq3kzyyqzl"
-        }
-      ],
-      "raw_score": 70,
+      "active_incidents": [],
+      "raw_score": 100,
       "confidence": 0.98,
-      "updated_at": "2026-11-18T23:44:45.676Z",
+      "updated_at": "2026-11-19T08:05:08.375Z",
       "source_url": "https://status.claude.com",
-      "level": "warn",
+      "level": "ok",
       "error": null,
       "first_anomaly_at": "2026-11-14T09:30:28Z",
-      "consecutive_anomalies": 18,
-      "consecutive_recoveries": 0,
-      "anomaly_seconds": 401959,
-      "latest_incident_link": "https://stspg.io/01qq3kzyyqzl"
+      "consecutive_anomalies": 0,
+      "consecutive_recoveries": 1,
+      "anomaly_seconds": null,
+      "latest_incident_link": null
     },
     {
       "service": "Gemini",
-      "time": "2026-11-19T01:09:47Z",
+      "time": "2026-11-19T08:46:22Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-11-19T01:09:47Z",
+      "updated_at": "2026-11-19T08:46:22Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1798,
+      "consecutive_recoveries": 1799,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-11-19T01:09:47Z",
+      "time": "2026-11-19T08:46:22Z",
       "overall_status": "operational",
       "components": [
         {
@@ -252,19 +241,19 @@
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.85,
-      "updated_at": "2026-11-19T01:09:47.799863Z",
+      "updated_at": "2026-11-19T08:46:22.518666Z",
       "source_url": "https://status.x.ai/",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 92,
+      "consecutive_recoveries": 93,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-11-19T01:09:48Z",
+      "time": "2026-11-19T08:46:22Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -309,18 +298,11 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1798,
+      "consecutive_anomalies": 1799,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 13214985,
+      "anomaly_seconds": 13242379,
       "latest_incident_link": null
     }
   ],
-  "alerts": [
-    {
-      "type": "recover",
-      "service": "OpenAI",
-      "level": "ok",
-      "message": "OpenAI recovered"
-    }
-  ]
+  "alerts": []
 }
