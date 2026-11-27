@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-27T14:45:03Z",
+  "generated_at": "2026-11-27T22:59:55Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-11-27T14:45:02Z",
+      "time": "2026-11-27T22:59:54Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,13 +137,13 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 4,
+      "consecutive_recoveries": 5,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-11-27T14:45:02Z",
+      "time": "2026-11-27T22:59:54Z",
       "overall_status": "minor",
       "components": [
         {
@@ -201,80 +201,70 @@
         {
           "id": "3vbyqgnswwxq",
           "name": "Claude for Microsoft 365 add-in missing for some users",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "major",
           "shortlink": "https://stspg.io/ffdq2qfv8frk",
           "started_at": "2026-11-24T00:10:40.018Z",
-          "updated_at": "2026-11-25T20:21:12.140Z",
+          "updated_at": "2026-11-27T19:48:22.177Z",
           "url": "https://stspg.io/ffdq2qfv8frk"
         }
       ],
       "raw_score": 20,
       "confidence": 0.98,
-      "updated_at": "2026-11-27T14:39:50.675Z",
+      "updated_at": "2026-11-27T21:44:51.121Z",
       "source_url": "https://status.claude.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-11-24T00:49:10Z",
-      "consecutive_anomalies": 11,
+      "consecutive_anomalies": 12,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 309352,
+      "anomaly_seconds": 339044,
       "latest_incident_link": "https://stspg.io/ffdq2qfv8frk"
     },
     {
       "service": "Gemini",
-      "time": "2026-11-27T14:45:03Z",
+      "time": "2026-11-27T22:59:54Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-11-27T14:45:03Z",
+      "updated_at": "2026-11-27T22:59:54Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1825,
+      "consecutive_recoveries": 1826,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-11-27T14:45:03Z",
-      "overall_status": "major_outage",
+      "time": "2026-11-27T22:59:54Z",
+      "overall_status": "operational",
       "components": [
         {
           "name": "xAI System",
-          "status": "critical"
+          "status": "ok"
         }
       ],
-      "active_incidents": [
-        {
-          "id": "ps_665a368941fa8b5a",
-          "name": "[Grok API: Chat (Global, api.x.ai)] API Document Search Outage",
-          "status": "critical",
-          "severity": "critical",
-          "link": "https://status.x.ai/api-global/ps_665a368941fa8b5a",
-          "updated_at": "2026-11-27T04:26:05Z",
-          "raw_status": "<h3>Status: ACTIVE</h3><p>Severity: info</p><hr /><h4>Updates:</h4><div><p><strong>Fri, 27 Nov 2026 05:47:13 GMT</strong"
-        }
-      ],
-      "raw_score": 20,
-      "confidence": 0.9,
-      "updated_at": "2026-11-27T14:45:03.256455Z",
+      "active_incidents": [],
+      "raw_score": 100,
+      "confidence": 0.85,
+      "updated_at": "2026-11-27T22:59:54.818111Z",
       "source_url": "https://status.x.ai/",
-      "level": "critical",
+      "level": "ok",
       "error": null,
       "first_anomaly_at": "2026-11-27T04:56:55Z",
-      "consecutive_anomalies": 2,
-      "consecutive_recoveries": 0,
-      "anomaly_seconds": 35288,
-      "latest_incident_link": "https://status.x.ai/api-global/ps_665a368941fa8b5a"
+      "consecutive_anomalies": 0,
+      "consecutive_recoveries": 1,
+      "anomaly_seconds": null,
+      "latest_incident_link": null
     },
     {
       "service": "AWS",
-      "time": "2026-11-27T14:45:03Z",
+      "time": "2026-11-27T22:59:54Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -319,18 +309,11 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1825,
+      "consecutive_anomalies": 1826,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 13955100,
+      "anomaly_seconds": 13984791,
       "latest_incident_link": null
     }
   ],
-  "alerts": [
-    {
-      "type": "alert",
-      "service": "Grok",
-      "level": "critical",
-      "message": "Grok is in CRITICAL state (sampled 2026-11-27T14:45:03Z)"
-    }
-  ]
+  "alerts": []
 }
