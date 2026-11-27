@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-27T04:56:55Z",
+  "generated_at": "2026-11-27T14:45:03Z",
   "services": [
     {
       "service": "OpenAI",
-      "time": "2026-11-27T04:56:55Z",
+      "time": "2026-11-27T14:45:02Z",
       "overall_status": "none",
       "components": [
         {
@@ -137,19 +137,19 @@
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 3,
+      "consecutive_recoveries": 4,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Claude",
-      "time": "2026-11-27T04:56:55Z",
+      "time": "2026-11-27T14:45:02Z",
       "overall_status": "minor",
       "components": [
         {
           "name": "claude.ai",
           "status": "degraded_performance",
-          "updated_at": "2026-11-24T17:27:14.640Z"
+          "updated_at": "2026-11-27T10:40:12.334Z"
         },
         {
           "name": "Claude Platform on AWS",
@@ -169,7 +169,7 @@
         {
           "name": "Claude API (api.anthropic.com)",
           "status": "operational",
-          "updated_at": "2026-11-24T17:27:14.670Z"
+          "updated_at": "2026-11-27T10:40:12.367Z"
         },
         {
           "name": "Claude Models on Google Cloud (Anthropic managed)",
@@ -179,12 +179,12 @@
         {
           "name": "Claude Code",
           "status": "operational",
-          "updated_at": "2026-11-24T17:27:14.696Z"
+          "updated_at": "2026-11-27T10:40:12.396Z"
         },
         {
           "name": "Claude Cowork",
           "status": "operational",
-          "updated_at": "2026-11-24T17:27:14.723Z"
+          "updated_at": "2026-11-27T10:40:12.511Z"
         },
         {
           "name": "Claude for Government",
@@ -211,37 +211,37 @@
       ],
       "raw_score": 20,
       "confidence": 0.98,
-      "updated_at": "2026-11-27T04:09:20.140Z",
+      "updated_at": "2026-11-27T14:39:50.675Z",
       "source_url": "https://status.claude.com",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-11-24T00:49:10Z",
-      "consecutive_anomalies": 10,
+      "consecutive_anomalies": 11,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 274065,
+      "anomaly_seconds": 309352,
       "latest_incident_link": "https://stspg.io/ffdq2qfv8frk"
     },
     {
       "service": "Gemini",
-      "time": "2026-11-27T04:56:55Z",
+      "time": "2026-11-27T14:45:03Z",
       "overall_status": "operational",
       "components": [],
       "active_incidents": [],
       "raw_score": 100,
       "confidence": 0.95,
-      "updated_at": "2026-11-27T04:56:55Z",
+      "updated_at": "2026-11-27T14:45:03Z",
       "source_url": "https://status.cloud.google.com",
       "level": "ok",
       "error": null,
       "first_anomaly_at": null,
       "consecutive_anomalies": 0,
-      "consecutive_recoveries": 1824,
+      "consecutive_recoveries": 1825,
       "anomaly_seconds": null,
       "latest_incident_link": null
     },
     {
       "service": "Grok",
-      "time": "2026-11-27T04:56:55Z",
+      "time": "2026-11-27T14:45:03Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -257,24 +257,24 @@
           "severity": "critical",
           "link": "https://status.x.ai/api-global/ps_665a368941fa8b5a",
           "updated_at": "2026-11-27T04:26:05Z",
-          "raw_status": "<h3>Status: ACTIVE</h3><p>Severity: info</p><hr /><h4>Updates:</h4><div><p><strong>Fri, 27 Nov 2026 04:26:05 GMT</strong"
+          "raw_status": "<h3>Status: ACTIVE</h3><p>Severity: info</p><hr /><h4>Updates:</h4><div><p><strong>Fri, 27 Nov 2026 05:47:13 GMT</strong"
         }
       ],
       "raw_score": 20,
       "confidence": 0.9,
-      "updated_at": "2026-11-27T04:56:55.663218Z",
+      "updated_at": "2026-11-27T14:45:03.256455Z",
       "source_url": "https://status.x.ai/",
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-11-27T04:56:55Z",
-      "consecutive_anomalies": 1,
+      "consecutive_anomalies": 2,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 0,
+      "anomaly_seconds": 35288,
       "latest_incident_link": "https://status.x.ai/api-global/ps_665a368941fa8b5a"
     },
     {
       "service": "AWS",
-      "time": "2026-11-27T04:56:55Z",
+      "time": "2026-11-27T14:45:03Z",
       "overall_status": "major_outage",
       "components": [
         {
@@ -319,11 +319,18 @@
       "level": "critical",
       "error": null,
       "first_anomaly_at": "2026-06-19T02:20:03Z",
-      "consecutive_anomalies": 1824,
+      "consecutive_anomalies": 1825,
       "consecutive_recoveries": 0,
-      "anomaly_seconds": 13919812,
+      "anomaly_seconds": 13955100,
       "latest_incident_link": null
     }
   ],
-  "alerts": []
+  "alerts": [
+    {
+      "type": "alert",
+      "service": "Grok",
+      "level": "critical",
+      "message": "Grok is in CRITICAL state (sampled 2026-11-27T14:45:03Z)"
+    }
+  ]
 }
